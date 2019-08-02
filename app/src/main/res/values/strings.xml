@@ -3,4 +3,7 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="sosyal_giris">Sosyal Giriş</string>
+    <string name="ogretmen_giris">Öğretmen Giriş</string>
+    <string name="veli_giris">Veli Giriş</string>
 </resources>
