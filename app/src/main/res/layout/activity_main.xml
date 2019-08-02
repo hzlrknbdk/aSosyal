@@ -5,7 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".activities.MainActivity"
-    android:background="@color/colorAccent">
+    android:id="@+id/container"
+    android:background="@color/colorAccent"
+    style="@style/AppTheme">
 
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/splash_animation"
@@ -13,7 +15,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         app:lottie_autoPlay="true"
-        app:lottie_fileName="preloader2.json"
+        app:lottie_fileName="preloader.json"
         app:lottie_loop="true" />
 
 </LinearLayout>
