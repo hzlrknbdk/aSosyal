@@ -48,8 +48,9 @@ public class MainFragment extends Fragment implements View.OnClickListener {
                 assert fragmentManager != null;
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.container, socialFragment);
-                //   fragmentTransaction.addToBackStack(null);
+                fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.commit();
+                break;
 
 
             case R.id.btn_parents:
@@ -58,8 +59,9 @@ public class MainFragment extends Fragment implements View.OnClickListener {
                 assert fragmentManager1 != null;
                 FragmentTransaction fragmentTransaction1 = fragmentManager1.beginTransaction();
                 fragmentTransaction1.replace(R.id.container, parentsFragment);
-                //    fragmentTransaction1.addToBackStack(null);
+                fragmentTransaction1.addToBackStack(null);
                 fragmentTransaction1.commit();
+                break;
 
             case R.id.btn_teacher:
                 TeacherFragment teacherFragment = new TeacherFragment();
@@ -67,8 +69,9 @@ public class MainFragment extends Fragment implements View.OnClickListener {
                 assert fragmentManager2 != null;
                 FragmentTransaction fragmentTransaction2 = fragmentManager2.beginTransaction();
                 fragmentTransaction2.replace(R.id.container, teacherFragment);
-                //   fragmentTransaction2.addToBackStack(null);
+                fragmentTransaction2.addToBackStack(null);
                 fragmentTransaction2.commit();
+                break;
         }
 
     }
