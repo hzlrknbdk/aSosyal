@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "816365539130",
+    "firebase_url": "https://asosyal-7e40e.firebaseio.com",
+    "project_id": "asosyal-7e40e",
+    "storage_bucket": "asosyal-7e40e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:816365539130:android:6bf26e9ffce71c9d",
+        "android_client_info": {
+          "package_name": "com.hzlrknbdk.asosyal"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "816365539130-i7qmhs7l5sqkr543ndo87vmtd4ds043a.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hzlrknbdk.asosyal",
+            "certificate_hash": "ea93541f58ef46a95232ca0713f2691a9a9befd3"
+          }
+        },
+        {
+          "client_id": "816365539130-e78iimdvev3q21848kv25uvdue5u2i0n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBuSnelRX9vyfv5APfUJuiA4h4oQSL4dUM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "816365539130-e78iimdvev3q21848kv25uvdue5u2i0n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

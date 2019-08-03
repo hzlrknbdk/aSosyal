@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void pushFragment() {
 
-        int SPLASH_TIME = 4000;
+        int SPLASH_TIME = 3000;
         new Handler().postDelayed(() -> {
             lottieAnimationView.setVisibility(View.GONE);
             FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
     public void SplashAnimation() {
 
         LottieAnimationView animationView = findViewById(R.id.splash_animation);
-        animationView.setAnimation("preloader.json");
+        animationView.setAnimation("loading.json");
         animationView.playAnimation();
 
 

@@ -31,7 +31,7 @@
                 android:orientation="vertical">
 
                 <EditText
-                    android:id="@+id/login_email"
+                    android:id="@+id/reg_name_et"
                     style="@style/Font_family_light"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -49,12 +49,11 @@
                     android:padding="@dimen/padding_16"
                     android:textColor="@color/white"
                     android:textColorHint="@color/white"
-                    android:textSize="@dimen/text_16"
-                    tools:ignore="TextFields" />
+                    android:textSize="@dimen/text_16" />
 
 
                 <EditText
-                    android:id="@+id/login_password"
+                    android:id="@+id/reg_password_et"
                     style="@style/Font_family_light"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -74,7 +73,6 @@
                     android:textSize="@dimen/text_16" />
 
                 <Button
-                    android:id="@+id/btn_parents_login"
                     style="@style/Font_family_regular"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
