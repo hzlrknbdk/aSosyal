@@ -40,8 +40,7 @@ public class CreateAccountFragment extends Fragment implements View.OnClickListe
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.fragment_create_account, container, false);
 
@@ -58,7 +57,6 @@ public class CreateAccountFragment extends Fragment implements View.OnClickListe
 
         return view;
     }
-
 
     @Override
     public void onStart() {
@@ -126,7 +124,9 @@ public class CreateAccountFragment extends Fragment implements View.OnClickListe
                                     progressBar.setVisibility(View.GONE);
                                     if (task.isSuccessful()) {
                                         Toast.makeText(CreateAccountFragment.this.getContext(), getString(R.string.registration_success), Toast.LENGTH_SHORT).show();
-
+                                        editTextName.setText("");
+                                        editTextEmail.setText("");
+                                        editTextPassword.setText("");
                                     } else {
 
 
@@ -157,6 +157,7 @@ public class CreateAccountFragment extends Fragment implements View.OnClickListe
     public void onClick(View v) {
         if (v.getId() == R.id.createAccount_btn) {
             registerUser();
+
         }
         if (v.getId() == R.id.TV_Signin) {
             redirectToLogin();
