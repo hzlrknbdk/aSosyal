@@ -1,16 +1,27 @@
 <resources>
-    <string name="app_name">\@Sosyal</string>
 
+    <string name="app_name">\@Sosyal</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="sosyal_giris">Sosyal Giriş</string>
     <string name="ogretmen_giris">Öğretmen Giriş</string>
     <string name="veli_giris">Veli Giriş</string>
-
-
     <string name="kullaniciAdi">Kullanıcı Adı</string>
-    <string name="sifre">Şifre</string>
     <string name="giris">GİRİŞ</string>
     <string name="hesap_olustur">Hesap Oluştur</string>
     <string name="yardim">Yardım?</string>
+    <string name="bize_katil">Bize Katıl</string>
+    <string name="sifre">Şifre</string>
+    <string name="email">Email</string>
+    <string name="kullanici_adi">Kullanıcı Adı</string>
+    <string name="acilis">Aramıza katılman için birkaç bilgine ihtiyacımız var. Hazırsan başlayalım!</string>
+    <string name="hey_hosgeldin">Hey Hoşgeldin!</string>
+    <string name="sifre_tekrar">Şifre Tekrar</string>
+    <string name="ad_soyad">Adı Soyadı</string>
+    <string name="input_error_name">Lütfen adınızı giriniz.</string>
+    <string name="input_error_email">Lütfen e-mail adresinizi giriniz.</string>
+    <string name="input_error_password">Lütfen şifrenizi giriniz.</string>
+    <string name="input_error_password_length">Şifre en az 6 karakter olmalı.</string>
+    <string name="registration_success">Kayıt işlemi başarılıyla gerçekleşti.</string>
+    <string name="input_error_email_invalid">Geçerli bir e-posta giriniz.</string>
 
 </resources>

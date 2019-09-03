@@ -6,10 +6,6 @@
     app:startDestination="@layout/fragment_main"
     tools:ignore="UnusedNavigation">
 
-    <fragment
-        android:id="@+id/parents"
-        android:name="com.hzlrknbdk.asosyal.fragments.ParentsFragment"
-        tools:layout="@layout/fragment_parents" />
 
     <fragment
         android:id="@+id/social"
@@ -32,9 +28,7 @@
         <action
             android:id="@+id/action_fragmentMain_to_fragmentTeacher"
             app:destination="@id/teacher" />
-        <action
-            android:id="@+id/action_fragmentMain_to_fragmentParents"
-            app:destination="@id/parents" />
+
     </fragment>
 
 </navigation>

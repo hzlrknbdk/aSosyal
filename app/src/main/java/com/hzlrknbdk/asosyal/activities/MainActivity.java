@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void pushFragment() {
 
-        int SPLASH_TIME = 3000;
+        int SPLASH_TIME = 4000;
         new Handler().postDelayed(() -> {
             lottieAnimationView.setVisibility(View.GONE);
             FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
