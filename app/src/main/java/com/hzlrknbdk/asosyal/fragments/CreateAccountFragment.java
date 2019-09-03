@@ -124,9 +124,7 @@ public class CreateAccountFragment extends Fragment implements View.OnClickListe
                                     progressBar.setVisibility(View.GONE);
                                     if (task.isSuccessful()) {
                                         Toast.makeText(CreateAccountFragment.this.getContext(), getString(R.string.registration_success), Toast.LENGTH_SHORT).show();
-                                        editTextName.setText("");
-                                        editTextEmail.setText("");
-                                        editTextPassword.setText("");
+                                        redirectToLogin();
                                     } else {
 
 

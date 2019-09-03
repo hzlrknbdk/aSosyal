@@ -5,8 +5,6 @@
     android:layout_height="match_parent">
 
 
-
-
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -213,7 +211,7 @@
                         android:layout_weight="1"
                         android:background="@color/transparent"
                         android:gravity="right|center"
-                        android:text="Artık bir hesabım var!"
+                        android:text="Zaten bir hesabım var!"
                         android:textColor="@color/white"
                         android:textSize="@dimen/text_14" />
 
