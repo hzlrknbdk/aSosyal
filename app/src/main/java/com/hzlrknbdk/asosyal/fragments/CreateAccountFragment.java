@@ -114,7 +114,9 @@ public class CreateAccountFragment extends Fragment implements View.OnClickListe
                         if (task.isSuccessful()) {
 
                             User user = new User(
-                                    name, email
+                                    name,
+                                    email,
+                                    password
                             );
                             FirebaseDatabase.getInstance().getReference("Users")
                                     .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
