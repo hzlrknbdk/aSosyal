@@ -16,17 +16,14 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.hzlrknbdk.asosyal.R;
 
 
-public class MainFragment extends Fragment {
+public class MainFragment extends Fragment implements View.OnClickListener {
 
-
-    EditText login_email, login_password;
-    FirebaseAuth auth;
-
+    private EditText login_email, login_password;
+    private FirebaseAuth auth;
 
     public MainFragment() {
-        // Required empty public constructor
-    }
 
+    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -35,53 +32,82 @@ public class MainFragment extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_main, container, false);
 
         auth = FirebaseAuth.getInstance();
         login_email = view.findViewById(R.id.login_email);
         login_password = view.findViewById(R.id.login_password);
 
-        view.findViewById(R.id.btn_login).setOnClickListener(v -> {
-            String txt_email = login_email.getText().toString();
-            String txt_password = login_password.getText().toString();
-            if (TextUtils.isEmpty(txt_email) || TextUtils.isEmpty(txt_password)) {
-                Toast.makeText(MainFragment.this.getContext(), "All field are required", Toast.LENGTH_SHORT).show();
+        view.findViewById(R.id.btn_login).setOnClickListener(this);
+        view.findViewById(R.id.tv_Create_Account).setOnClickListener(this);
+        view.findViewById(R.id.notUser).setOnClickListener(this);
 
-            } else {
-                auth.signInWithEmailAndPassword(txt_email, txt_password)
-                        .addOnCompleteListener(task -> {
-                            if (task.isSuccessful()) {
-                                ParentsHomePageFragment parentsHomePageFragment = new ParentsHomePageFragment();
-                                FragmentManager fragmentManager = getFragmentManager();
-                                assert fragmentManager != null;
-                                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                                fragmentTransaction.replace(R.id.container, parentsHomePageFragment);
-                                fragmentTransaction.addToBackStack(null);
-                                fragmentTransaction.commit();
-                            } else {
-                                Toast.makeText(MainFragment.this.getContext(), "Authentication failed!", Toast.LENGTH_SHORT).show();
-
-                            }
-
-
-                        });
-            }
-        });
-
-        view.findViewById(R.id.tv_Create_Account).setOnClickListener(v -> {
-            CreateAccountFragment createAccountFragment = new CreateAccountFragment();
-            FragmentManager fragmentManager = getFragmentManager();
-            assert fragmentManager != null;
-            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-            fragmentTransaction.replace(R.id.container, createAccountFragment);
-            fragmentTransaction.addToBackStack(null);
-            fragmentTransaction.commit();
-
-        });
         return view;
     }
 
+    @Override
+    public void onClick(View v) {
+        if (v.getId() == R.id.btn_login) {
+            loginAccount();
+        }
+        if (v.getId() == R.id.tv_Create_Account) {
+            createAccount();
+        }
+        if (v.getId() == R.id.notUser) {
+            transitionToActionPage();
+        }
+    }
+
+    private void loginAccount() {
+        String txt_email = login_email.getText().toString();
+        String txt_password = login_password.getText().toString();
+        if (TextUtils.isEmpty(txt_email) || TextUtils.isEmpty(txt_password)) {
+            Toast.makeText(MainFragment.this.getContext(), "All field are required", Toast.LENGTH_SHORT).show();
+
+        } else {
+            auth.signInWithEmailAndPassword(txt_email, txt_password)
+                    .addOnCompleteListener(task -> {
+                        if (task.isSuccessful()) {
+                            ParentsHomePageFragment parentsHomePageFragment = new ParentsHomePageFragment();
+                            FragmentManager fragmentManager = getFragmentManager();
+                            assert fragmentManager != null;
+                            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                            fragmentTransaction.replace(R.id.container, parentsHomePageFragment);
+                            fragmentTransaction.addToBackStack(null);
+                            fragmentTransaction.commit();
+                        } else {
+                            Toast.makeText(MainFragment.this.getContext(), "Authentication failed!", Toast.LENGTH_SHORT).show();
+
+                        }
+
+
+                    });
+        }
+
+    }
+
+    private void createAccount() {
+        ActionFragment createAccountFragment = new ActionFragment();
+        FragmentManager fragmentManager = getFragmentManager();
+        assert fragmentManager != null;
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.container, createAccountFragment);
+        fragmentTransaction.addToBackStack(null);
+        fragmentTransaction.commit();
+
+
+    }
+
+    private void transitionToActionPage() {
+        ActionFragment actionFragment = new ActionFragment();
+        FragmentManager fragmentManager = getFragmentManager();
+        assert fragmentManager != null;
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.container, actionFragment);
+        fragmentTransaction.addToBackStack(null);
+        fragmentTransaction.commit();
+
+    }
 
 }

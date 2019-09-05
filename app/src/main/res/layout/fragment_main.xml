@@ -42,8 +42,8 @@
                     android:background="@drawable/edit_style"
                     android:drawableLeft="@drawable/ic_person"
                     android:drawablePadding="@dimen/padding_16"
-                    android:hint="@string/kullaniciAdi"
-                    android:inputType="text"
+                    android:hint="@string/email"
+                    android:inputType="textEmailAddress"
                     android:maxLength="30"
                     android:maxLines="1"
                     android:padding="@dimen/padding_16"
@@ -87,7 +87,6 @@
                     android:textColor="@color/white"
                     android:textSize="@dimen/text_16" />
 
-
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -130,6 +129,20 @@
 
 
                 </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/notUser"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-regular"
+                    android:gravity="center"
+                    android:paddingTop="50dp"
+                    android:paddingBottom="@dimen/padding_16"
+                    android:text="Üye olmadan devam et."
+                    android:textColor="@color/happy_orange"
+                    android:textSize="@dimen/text_20" />
+
 
             </LinearLayout>
 

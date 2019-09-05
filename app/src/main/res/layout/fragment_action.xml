@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    tools:context=".fragments.ActionFragment">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_left_16"
+            android:layout_marginTop="@dimen/margin_top_16"
+            android:layout_marginRight="@dimen/margin_right_16"
+            android:layout_marginBottom="@dimen/margin_top_16"
+            android:background="@drawable/action_search_input_style"
+            android:drawableLeft="@drawable/ic_search_gray_24dp"
+            android:drawablePadding="@dimen/padding_8"
+            android:ems="20"
+            android:hint="Search"
+            android:inputType="textPersonName"
+            android:textColor="@color/content_text_color" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <fragment
+                    android:id="@+id/one_fragment"
+                    android:name="com.hzlrknbdk.asosyal.fragments.InstitutionsFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_top_16" />
+
+                <fragment
+                    android:id="@+id/two_fragment"
+                    android:name="com.hzlrknbdk.asosyal.fragments.ScientificFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp" />
+
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+
+</FrameLayout>
