@@ -32,11 +32,15 @@ public class InstitutionsFragment extends Fragment {
         super.onCreate(savedInstanceState);
 
         lstCategoryNames = new ArrayList<>();
-        lstCategoryNames.add(new CategoryName("Milli Eğitim Bakanlığına Bağlı Kurumlar"));
-        lstCategoryNames.add(new CategoryName("Gençlik ve Spor Bakanlığına Bağlı Kurumlar"));
-        lstCategoryNames.add(new CategoryName("Belediyeler"));
+        lstCategoryNames.add(new CategoryName("Sivil Toplum Kuruluşları"));
         lstCategoryNames.add(new CategoryName("Üniversiteler"));
-
+        lstCategoryNames.add(new CategoryName("Belediyeler"));
+        lstCategoryNames.add(new CategoryName("Milli Eğitim Bakanlığına Bağlı Kurumlar"));
+        lstCategoryNames.add(new CategoryName("Sanayi veTeknoloji Bakanlığına Bağlı Kurumlar"));
+        lstCategoryNames.add(new CategoryName("Gençlik ve Spor Bakanlığına Bağlı Kurumlar"));
+        lstCategoryNames.add(new CategoryName("Aile, Çalışma ve Sosyal Hizmetler Bakanlığına Bağlı Kurumlar"));
+        lstCategoryNames.add(new CategoryName("Kültür ve Turizm Bakanlığına Bağlı Kurumlar"));
+        lstCategoryNames.add(new CategoryName("Diğer Resmi Kuruluşlar"));
 
     }
 

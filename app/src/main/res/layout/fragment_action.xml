@@ -6,7 +6,6 @@
     android:background="@color/colorPrimaryDark"
     tools:context=".fragments.ActionFragment">
 
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -37,7 +36,6 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-
                 <fragment
                     android:id="@+id/one_fragment"
                     android:name="com.hzlrknbdk.asosyal.fragments.InstitutionsFragment"
@@ -49,7 +47,15 @@
                     android:id="@+id/two_fragment"
                     android:name="com.hzlrknbdk.asosyal.fragments.ScientificFragment"
                     android:layout_width="match_parent"
-                    android:layout_height="250dp" />
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_top_16" />
+
+                <fragment
+                    android:id="@+id/ragment"
+                    android:name="com.hzlrknbdk.asosyal.fragments.CulturalFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:layout_marginBottom="@dimen/margin_top_16" />
 
 
             </LinearLayout>
