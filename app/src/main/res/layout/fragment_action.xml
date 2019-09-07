@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimaryDark"
-    tools:context=".fragments.ActionFragment">
+    tools:context=".fragments.actionfragment.ActionFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -33,30 +33,43 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:orientation="vertical">
 
                 <fragment
-                    android:id="@+id/one_fragment"
-                    android:name="com.hzlrknbdk.asosyal.fragments.InstitutionsFragment"
+                    android:id="@+id/institutions_fragment"
+                    android:name="com.hzlrknbdk.asosyal.fragments.actionfragment.InstitutionsFragment"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="@dimen/margin_top_16" />
 
                 <fragment
-                    android:id="@+id/two_fragment"
-                    android:name="com.hzlrknbdk.asosyal.fragments.ScientificFragment"
+                    android:id="@+id/scientific_fragment"
+                    android:name="com.hzlrknbdk.asosyal.fragments.actionfragment.ScientificFragment"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="@dimen/margin_top_16" />
 
                 <fragment
-                    android:id="@+id/ragment"
-                    android:name="com.hzlrknbdk.asosyal.fragments.CulturalFragment"
+                    android:id="@+id/cultural_fragment"
+                    android:name="com.hzlrknbdk.asosyal.fragments.actionfragment.CulturalFragment"
                     android:layout_width="match_parent"
-                    android:layout_height="300dp"
+                    android:layout_height="wrap_content"
                     android:layout_marginBottom="@dimen/margin_top_16" />
 
+                <fragment
+                    android:id="@+id/art_fragment"
+                    android:name="com.hzlrknbdk.asosyal.fragments.actionfragment.ArtFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="260dp"
+                    android:layout_marginBottom="@dimen/margin_top_16" />
+
+                <fragment
+                    android:id="@+id/sporty_fragment"
+                    android:name="com.hzlrknbdk.asosyal.fragments.actionfragment.SportyFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="260dp"
+                    android:layout_marginBottom="@dimen/margin_top_16" />
 
             </LinearLayout>
 

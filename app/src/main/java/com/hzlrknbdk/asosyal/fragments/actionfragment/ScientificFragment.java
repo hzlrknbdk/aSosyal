@@ -1,4 +1,4 @@
-package com.hzlrknbdk.asosyal.fragments;
+package com.hzlrknbdk.asosyal.fragments.actionfragment;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
