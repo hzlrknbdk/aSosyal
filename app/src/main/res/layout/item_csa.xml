@@ -5,16 +5,15 @@
     android:layout_height="wrap_content">
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/cardView"
-        android:layout_width="170dp"
-        android:layout_height="120dp"
+        android:id="@+id/CV_csa"
+        android:layout_width="350dp"
+        android:layout_height="70dp"
         android:layout_margin="5dp"
         android:padding="@dimen/padding_4"
-        app:cardCornerRadius="10dp"
-        app:cardBackgroundColor="#8a8c8f">
+        app:cardCornerRadius="10dp">
 
         <TextView
-            android:id="@+id/category_name"
+            android:id="@+id/csa_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -22,10 +21,9 @@
             android:gravity="center"
             android:padding="5dp"
             android:text="Deneme"
-            android:textColor="#484b51"
+            android:textColor="@color/card_bg_color"
             android:textSize="@dimen/text_14" />
 
     </androidx.cardview.widget.CardView>
 
 </FrameLayout>
-

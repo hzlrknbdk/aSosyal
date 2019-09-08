@@ -6,7 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.hzlrknbdk.asosyal.R;
@@ -17,8 +17,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ScientificFragment extends Fragment {
-
-    List<CategoryName> lstScientific;
+    View v;
+    private List<CategoryName> lstScientific;
     private RecyclerView sRV;
 
     public ScientificFragment() {
@@ -28,13 +28,6 @@ public class ScientificFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-    }
-
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.fragment_scientific, container, false);
         lstScientific = new ArrayList<>();
         lstScientific.add(new CategoryName("Bilim Olimpiyatları"));
         lstScientific.add(new CategoryName("Bilim Şenlikleri"));
@@ -47,10 +40,17 @@ public class ScientificFragment extends Fragment {
         lstScientific.add(new CategoryName("Bilişim Teknolojilerine Yönelik Uygulamalar"));
         lstScientific.add(new CategoryName("Fen, Teknoloji, Mühendislik ve Matematik Alanlarına Yönelik Uygulamalar"));
 
+    }
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        v = inflater.inflate(R.layout.fragment_scientific, container, false);
         sRV = v.findViewById(R.id.rv_scientific);
-        RVScientificAdapter scientificAdapter = new RVScientificAdapter(this.getContext(), lstScientific);
-        sRV.setLayoutManager(new GridLayoutManager(this.getContext(), 2));
-        sRV.setAdapter(scientificAdapter);
+        RVScientificAdapter rvScientificAdapter = new RVScientificAdapter(getContext(), lstScientific);
+        LinearLayoutManager linearHorizontal = new LinearLayoutManager(this.getContext(), LinearLayoutManager.VERTICAL, false);
+        rvScientificAdapter.setLayoutManager(linearHorizontal);
+        sRV.setAdapter(rvScientificAdapter);
 
         return v;
     }

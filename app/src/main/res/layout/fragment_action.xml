@@ -42,12 +42,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="@dimen/margin_top_16" />
-
                 <fragment
-                    android:id="@+id/scientific_fragment"
-                    android:name="com.hzlrknbdk.asosyal.fragments.actionfragment.ScientificFragment"
+                    android:id="@+id/sporty_fragment"
+                    android:name="com.hzlrknbdk.asosyal.fragments.actionfragment.SportyFragment"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="260dp"
                     android:layout_marginBottom="@dimen/margin_top_16" />
 
                 <fragment
@@ -65,8 +64,16 @@
                     android:layout_marginBottom="@dimen/margin_top_16" />
 
                 <fragment
-                    android:id="@+id/sporty_fragment"
-                    android:name="com.hzlrknbdk.asosyal.fragments.actionfragment.SportyFragment"
+                    android:id="@+id/scientific_fragment"
+                    android:name="com.hzlrknbdk.asosyal.fragments.actionfragment.ScientificFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_top_16" />
+
+
+                <fragment
+                    android:id="@+id/community_service_fragment"
+                    android:name="com.hzlrknbdk.asosyal.fragments.actionfragment.CommunityServiceFragment"
                     android:layout_width="match_parent"
                     android:layout_height="260dp"
                     android:layout_marginBottom="@dimen/margin_top_16" />

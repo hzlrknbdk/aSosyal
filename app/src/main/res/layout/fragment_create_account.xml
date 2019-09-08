@@ -48,7 +48,7 @@
                         android:layout_marginRight="@dimen/margin_right_16"
                         android:fontFamily="sans-serif-regular"
                         android:text="@string/hey_hosgeldin"
-                        android:textColor="@color/happy_orange"
+                        android:textColor="#a668ca"
                         android:textSize="@dimen/text_20"
                         android:textStyle="bold"
                         tools:ignore="SpUsage" />
@@ -188,7 +188,7 @@
                     android:layout_marginBottom="@dimen/margin_bottom_16"
                     android:background="@drawable/custom_button"
                     android:text="@string/bize_katil"
-                    android:textColor="@color/happy_orange"
+                    android:textColor="@color/white"
                     android:textSize="@dimen/text_18"
                     tools:ignore="SpUsage" />
 

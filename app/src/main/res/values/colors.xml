@@ -69,4 +69,5 @@
 
     <color name="viewBackground">#b3b3b3</color>
     <color name="category_name_color">#f1f1f1</color>
+    <color name="purple">#683089</color>
 </resources>

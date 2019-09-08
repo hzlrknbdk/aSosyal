@@ -25,7 +25,7 @@ public class RVCategoryAdapter extends RecyclerView.Adapter<RVCategoryAdapter.Ca
 
     //  public String[] mColors = {"#ba68c8", "#9575cd", "#7986cb", "#4fc3f7", "#4db6ac", "#81c784", "#aed581", "#ffb74d", "#a1887f", "#ffb74d", "#ff8a65", "#a1887f", "#90a4ae"};
 
-    public String[] mColors = {"#925807","#aa6708", "#c37509", "#db840a", "#f4930b", "#f49c1e", "#f59e24", "#f6a83c", "#f7b355", "#f8be6d"};
+   // public String[] mColors = {"#925807","#aa6708", "#c37509", "#db840a", "#f4930b", "#f49c1e", "#f59e24", "#f6a83c", "#f7b355", "#f8be6d"};
 
 
     public RVCategoryAdapter(Context mContext, List<CategoryName> mData) {
@@ -47,7 +47,7 @@ public class RVCategoryAdapter extends RecyclerView.Adapter<RVCategoryAdapter.Ca
     public void onBindViewHolder(@NonNull CategoryViewHolder holder, int position) {
 
         holder.category_name.setText(mData.get(position).getName());
-        holder.cardView.setCardBackgroundColor(Color.parseColor(mColors[position % 9]));
+      //  holder.cardView.setCardBackgroundColor(Color.parseColor(mColors[position % 9]));
 
     }
 
@@ -68,13 +68,13 @@ public class RVCategoryAdapter extends RecyclerView.Adapter<RVCategoryAdapter.Ca
     public static class CategoryViewHolder extends RecyclerView.ViewHolder {
 
         private TextView category_name;
-        CardView cardView;
+      //  CardView cardView;
 
         public CategoryViewHolder(@NonNull View itemView) {
             super(itemView);
 
             category_name = itemView.findViewById(R.id.category_name);
-            cardView = itemView.findViewById(R.id.cardView);
+          //  cardView = itemView.findViewById(R.id.cardView);
 
         }
     }

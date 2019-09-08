@@ -22,7 +22,8 @@ public class RVSportyAdapter extends RecyclerView.Adapter<RVSportyAdapter.Sporty
     Context spContext;
     List<CategoryName> spData;
     private LinearLayoutManager layoutManager;
-    public String[] spColors = {"#413c0b", "#57500f", "#6c6313", "#827717", "#988b1b", "#ad9f1f", "#c3b322", "#d9c726", "#ddcd3c", "#e0d252"};
+
+    public String[] spColors = {"#683089", "#733597", "#813caa", "#9042bd", "#9b55c3", "#a668ca"};
 
 
     public RVSportyAdapter(Context spContext, List<CategoryName> spData) {
@@ -43,7 +44,7 @@ public class RVSportyAdapter extends RecyclerView.Adapter<RVSportyAdapter.Sporty
     @Override
     public void onBindViewHolder(@NonNull SportyVievHolder holder, int position) {
         holder.sportyName.setText(spData.get(position).getName());
-        holder.cardView.setCardBackgroundColor(Color.parseColor(spColors[position % 10]));
+        holder.cardView.setCardBackgroundColor(Color.parseColor(spColors[position % 6]));
     }
     public void setLayoutManager(LinearLayoutManager layoutManager) {
 

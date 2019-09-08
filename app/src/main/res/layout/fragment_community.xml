@@ -4,23 +4,23 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".fragments.actionfragment.ScientificFragment">
+    tools:context=".fragments.actionfragment.CommunityServiceFragment">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/margin_12"
         android:fontFamily="Font_family_light"
-        android:text="Bilimsel Etkinlik Kategorileri"
+        android:text="Toplum Hizmeti Çalışmaları Kategorileri"
         android:textColor="@color/card_bg_color"
         android:textSize="@dimen/text_18"
         android:textStyle="bold" />
 
     <androidx.recyclerview.widget.RecyclerView xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/rv_scientific"
+        android:id="@+id/rv_csa"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="horizontal"
+        android:orientation="vertical"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
 
 </LinearLayout>

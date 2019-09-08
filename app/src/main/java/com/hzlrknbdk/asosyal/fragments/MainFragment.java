@@ -89,7 +89,7 @@ public class MainFragment extends Fragment implements View.OnClickListener {
     }
 
     private void createAccount() {
-        ActionFragment createAccountFragment = new ActionFragment();
+        CreateAccountFragment createAccountFragment = new CreateAccountFragment();
         FragmentManager fragmentManager = getFragmentManager();
         assert fragmentManager != null;
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
