@@ -23,8 +23,6 @@ public class RVCulturalAdapter extends RecyclerView.Adapter<RVCulturalAdapter.Cu
     private LinearLayoutManager layoutManager;
 
 
-    public String[] cColors = {"#e15801", "#e45801", "#fe6201", "#fe721b", "#fe8134"};
-
     public RVCulturalAdapter(Context cContext, List<CategoryName> cData) {
         this.cContext = cContext;
         this.cData = cData;
@@ -43,7 +41,7 @@ public class RVCulturalAdapter extends RecyclerView.Adapter<RVCulturalAdapter.Cu
     @Override
     public void onBindViewHolder(@NonNull CulturalViewHolder holder, int position) {
         holder.cultural_name.setText(cData.get(position).getName());
-        holder.cardView.setCardBackgroundColor(Color.parseColor(cColors[position % 5]));
+
     }
 
     public void setLayoutManager(LinearLayoutManager layoutManager) {
@@ -62,12 +60,12 @@ public class RVCulturalAdapter extends RecyclerView.Adapter<RVCulturalAdapter.Cu
 
     public static class CulturalViewHolder extends RecyclerView.ViewHolder {
         private TextView cultural_name;
-        CardView cardView;
+
 
         public CulturalViewHolder(@NonNull View itemView) {
             super(itemView);
             cultural_name = itemView.findViewById(R.id.cultural_name);
-            cardView = itemView.findViewById(R.id.CV_cultural);
+
         }
     }
 }

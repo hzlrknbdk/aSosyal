@@ -21,7 +21,8 @@ public class RVCommunityAdapter extends RecyclerView.Adapter<RVCommunityAdapter.
     Context csaContext;
     List<CategoryName> csaData;
     private LinearLayoutManager layoutManager;
-    public String[] csaColors = {"#413c0b", "#57500f", "#6c6313", "#827717", "#988b1b", "#ad9f1f", "#c3b322", "#d9c726", "#ddcd3c", "#e0d252"};
+
+    public String[] csaColors = {"#683089", "#733597", "#813caa", "#9042bd", "#9b55c3", "#a668ca"};
 
     public RVCommunityAdapter(Context csaContext, List<CategoryName> csaData) {
         this.csaContext = csaContext;
@@ -40,7 +41,7 @@ public class RVCommunityAdapter extends RecyclerView.Adapter<RVCommunityAdapter.
     @Override
     public void onBindViewHolder(@NonNull CommunityServiceVievHolder holder, int position) {
         holder.csaName.setText(csaData.get(position).getName());
-        holder.CV_csa.setCardBackgroundColor(Color.parseColor(csaColors[position % 10]));
+        holder.CV_csa.setCardBackgroundColor(Color.parseColor(csaColors[position % 6]));
     }
 
     public void setLayoutManager(LinearLayoutManager layoutManager) {

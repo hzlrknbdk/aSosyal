@@ -40,7 +40,7 @@ public class ArtFragment extends Fragment {
         lstArt.add(new CategoryName("Seramik"));
         lstArt.add(new CategoryName("Grafik Sanatlar"));
         lstArt.add(new CategoryName("Geleneksel Türk Sanatları"));
-        lstArt.add(new CategoryName("Tiyatroi"));
+        lstArt.add(new CategoryName("Tiyatro"));
         lstArt.add(new CategoryName("Rölyef"));
         lstArt.add(new CategoryName("Vurmalı Çalgılar"));
         lstArt.add(new CategoryName("Hikaye/Tiyatro Metni/ Roman"));

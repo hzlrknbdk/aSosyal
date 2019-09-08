@@ -22,7 +22,8 @@ public class RVArtAdapter extends RecyclerView.Adapter<RVArtAdapter.ArtViewHolde
     Context aContext;
     List<CategoryName> aData;
     private LinearLayoutManager layoutManager;
-    public String[] aColors = {"#413c0b", "#57500f", "#6c6313", "#827717", "#988b1b", "#ad9f1f", "#c3b322", "#d9c726", "#ddcd3c", "#e0d252"};
+
+    public String[] aColors = {"#683089", "#733597", "#813caa", "#9042bd", "#9b55c3", "#a668ca"};
 
 
     public RVArtAdapter(Context aContext, List<CategoryName> aData) {
@@ -43,7 +44,7 @@ public class RVArtAdapter extends RecyclerView.Adapter<RVArtAdapter.ArtViewHolde
     @Override
     public void onBindViewHolder(@NonNull ArtViewHolder holder, int position) {
         holder.artName.setText(aData.get(position).getName());
-        holder.CV_art.setCardBackgroundColor(Color.parseColor(aColors[position % 10]));
+        holder.CV_art.setCardBackgroundColor(Color.parseColor(aColors[position % 6]));
     }
 
     @Override

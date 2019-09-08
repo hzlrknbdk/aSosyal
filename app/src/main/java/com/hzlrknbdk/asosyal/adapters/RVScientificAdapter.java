@@ -1,14 +1,12 @@
 package com.hzlrknbdk.asosyal.adapters;
 
 import android.content.Context;
-import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -21,8 +19,6 @@ public class RVScientificAdapter extends RecyclerView.Adapter<RVScientificAdapte
     Context sContext;
     List<CategoryName> sData;
     private LinearLayoutManager layoutManager;
-
-    public String[] sColors = {"#413c0b", "#57500f", "#6c6313", "#827717", "#988b1b", "#ad9f1f", "#c3b322", "#d9c726", "#ddcd3c", "#e0d252"};
 
 
     public RVScientificAdapter(Context sContext, List<CategoryName> sData) {
@@ -42,7 +38,6 @@ public class RVScientificAdapter extends RecyclerView.Adapter<RVScientificAdapte
     @Override
     public void onBindViewHolder(@NonNull ScientificViewHolder holder, int position) {
         holder.scientificName.setText(sData.get(position).getName());
-        holder.cardView.setCardBackgroundColor(Color.parseColor(sColors[position % 10]));
     }
 
     @Override
@@ -62,14 +57,12 @@ public class RVScientificAdapter extends RecyclerView.Adapter<RVScientificAdapte
     public static class ScientificViewHolder extends RecyclerView.ViewHolder {
 
         private TextView scientificName;
-        CardView cardView;
 
 
         public ScientificViewHolder(@NonNull View itemView) {
             super(itemView);
 
             scientificName = itemView.findViewById(R.id.scientific_name);
-            cardView = itemView.findViewById(R.id.CV_scientific);
         }
     }
 }
