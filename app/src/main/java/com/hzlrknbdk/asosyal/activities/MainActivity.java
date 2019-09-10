@@ -1,5 +1,6 @@
 package com.hzlrknbdk.asosyal.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
@@ -20,9 +21,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         lottieAnimationView = findViewById(R.id.splash_animation);
-
         SplashAnimation();
         pushFragment();
 
@@ -33,22 +32,21 @@ public class MainActivity extends AppCompatActivity {
         int SPLASH_TIME = 4000;
         new Handler().postDelayed(() -> {
             lottieAnimationView.setVisibility(View.GONE);
-            FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+            Intent intent = new Intent(this, IntroViewPage.class);
+            startActivity(intent);
+           /* FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
             Fragment mainFragment = new MainFragment();
             transaction.replace(R.id.container, mainFragment);
-            transaction.commit();
-
+            transaction.addToBackStack(null);
+            transaction.commit();*/
         }, SPLASH_TIME);
     }
 
     public void SplashAnimation() {
-
         LottieAnimationView animationView = findViewById(R.id.splash_animation);
         animationView.setAnimation("loading.json");
         animationView.playAnimation();
 
-
     }
-
 
 }

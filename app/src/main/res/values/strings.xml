@@ -23,5 +23,8 @@
     <string name="input_error_password_length">Şifre en az 6 karakter olmalı.</string>
     <string name="registration_success">Kayıt işlemi başarılıyla gerçekleşti.</string>
     <string name="input_error_email_invalid">Geçerli bir e-posta giriniz.</string>
+    <string name="geri">Geri</string>
+    <string name="ileri">İleri</string>
+    <string name="atla">Atla</string>
 
 </resources>

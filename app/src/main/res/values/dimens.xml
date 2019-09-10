@@ -59,5 +59,8 @@
     <dimen name="design_bottom_navigation_icon_size" tools:override="true">6dp</dimen>
     <dimen name="margin_16dp">16dp</dimen>
     <dimen name="margin_12">12dp</dimen>
+    <dimen name="margin_40">40dp</dimen>
+    <dimen name="margin_30">30dp</dimen>
+    <dimen name="padding_20">20dp</dimen>
 
 </resources>

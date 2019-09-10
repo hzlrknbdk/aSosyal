@@ -8,29 +8,21 @@ import android.view.ViewGroup;
 import androidx.fragment.app.Fragment;
 
 import com.hzlrknbdk.asosyal.R;
-
-
 public class ActionFragment extends Fragment {
 
     public ActionFragment() {
-
     }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-
         View view = inflater.inflate(R.layout.fragment_action, container, false);
-
         return view;
     }
-
 
 }
