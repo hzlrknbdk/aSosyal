@@ -4,6 +4,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -11,24 +12,20 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.hzlrknbdk.asosyal.R;
-import com.hzlrknbdk.asosyal.model.CategoryName;
+import com.hzlrknbdk.asosyal.model.CategoryInformation;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
 public class RVCategoryAdapter extends RecyclerView.Adapter<RVCategoryAdapter.CategoryViewHolder> {
 
     Context mContext;
-    List<CategoryName> mData;
+    List<CategoryInformation> categoryInformationList;
     private LinearLayoutManager layoutManager;
 
-    //  public String[] mColors = {"#ba68c8", "#9575cd", "#7986cb", "#4fc3f7", "#4db6ac", "#81c784", "#aed581", "#ffb74d", "#a1887f", "#ffb74d", "#ff8a65", "#a1887f", "#90a4ae"};
-
-   // public String[] mColors = {"#925807","#aa6708", "#c37509", "#db840a", "#f4930b", "#f49c1e", "#f59e24", "#f6a83c", "#f7b355", "#f8be6d"};
-
-
-    public RVCategoryAdapter(Context mContext, List<CategoryName> mData) {
+    public RVCategoryAdapter(Context mContext, List<CategoryInformation> categoryInformations) {
         this.mContext = mContext;
-        this.mData = mData;
+        this.categoryInformationList = categoryInformations;
     }
 
     @NonNull
@@ -43,15 +40,13 @@ public class RVCategoryAdapter extends RecyclerView.Adapter<RVCategoryAdapter.Ca
 
     @Override
     public void onBindViewHolder(@NonNull CategoryViewHolder holder, int position) {
-
-        holder.category_name.setText(mData.get(position).getName());
-      //  holder.cardView.setCardBackgroundColor(Color.parseColor(mColors[position % 9]));
-
+        holder.name.setText(categoryInformationList.get(position).getName());
+        Picasso.get().load(categoryInformationList.get(position).getImage()).into(holder.icon);
     }
 
     @Override
     public int getItemCount() {
-        return mData.size();
+        return categoryInformationList.size();
     }
 
     public void setLayoutManager(LinearLayoutManager layoutManager) {
@@ -63,16 +58,17 @@ public class RVCategoryAdapter extends RecyclerView.Adapter<RVCategoryAdapter.Ca
         return layoutManager;
     }
 
-    public static class CategoryViewHolder extends RecyclerView.ViewHolder {
+    class CategoryViewHolder extends RecyclerView.ViewHolder {
 
-        private TextView category_name;
-      //  CardView cardView;
+        TextView name;
+        ImageView icon;
+
 
         public CategoryViewHolder(@NonNull View itemView) {
             super(itemView);
+            name = itemView.findViewById(R.id.institutions_name);
+            icon = itemView.findViewById(R.id.institutions_icon);
 
-            category_name = itemView.findViewById(R.id.category_name);
-          //  cardView = itemView.findViewById(R.id.cardView);
 
         }
     }

@@ -1,30 +1,28 @@
 package com.hzlrknbdk.asosyal.adapters;
 
 import android.content.Context;
-import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.hzlrknbdk.asosyal.R;
-import com.hzlrknbdk.asosyal.model.CategoryName;
+import com.hzlrknbdk.asosyal.model.CategoryInformation;
 
 import java.util.List;
 
 public class RVCommunityAdapter extends RecyclerView.Adapter<RVCommunityAdapter.CommunityServiceVievHolder> {
     Context csaContext;
-    List<CategoryName> csaData;
+    List<CategoryInformation> csaData;
     private LinearLayoutManager layoutManager;
 
-    public String[] csaColors = {"#683089", "#733597", "#813caa", "#9042bd", "#9b55c3", "#a668ca"};
+    // public String[] csaColors = {"#683089", "#733597", "#813caa", "#9042bd", "#9b55c3", "#a668ca"};
 
-    public RVCommunityAdapter(Context csaContext, List<CategoryName> csaData) {
+    public RVCommunityAdapter(Context csaContext, List<CategoryInformation> csaData) {
         this.csaContext = csaContext;
         this.csaData = csaData;
     }
@@ -41,7 +39,7 @@ public class RVCommunityAdapter extends RecyclerView.Adapter<RVCommunityAdapter.
     @Override
     public void onBindViewHolder(@NonNull CommunityServiceVievHolder holder, int position) {
         holder.csaName.setText(csaData.get(position).getName());
-        holder.CV_csa.setCardBackgroundColor(Color.parseColor(csaColors[position % 6]));
+        //   holder.CV_csa.setCardBackgroundColor(Color.parseColor(csaColors[position % 6]));
     }
 
     public void setLayoutManager(LinearLayoutManager layoutManager) {
@@ -60,13 +58,13 @@ public class RVCommunityAdapter extends RecyclerView.Adapter<RVCommunityAdapter.
 
     public static class CommunityServiceVievHolder extends RecyclerView.ViewHolder {
         private TextView csaName;
-        CardView CV_csa;
+        //  CardView CV_csa;
 
 
         public CommunityServiceVievHolder(@NonNull View itemView) {
             super(itemView);
             csaName = itemView.findViewById(R.id.csa_name);
-            CV_csa = itemView.findViewById(R.id.CV_csa);
+            //    CV_csa = itemView.findViewById(R.id.CV_csa);
         }
     }
 

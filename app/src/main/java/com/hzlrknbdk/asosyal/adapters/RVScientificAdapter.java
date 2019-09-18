@@ -11,17 +11,17 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.hzlrknbdk.asosyal.R;
-import com.hzlrknbdk.asosyal.model.CategoryName;
+import com.hzlrknbdk.asosyal.model.CategoryInformation;
 
 import java.util.List;
 
 public class RVScientificAdapter extends RecyclerView.Adapter<RVScientificAdapter.ScientificViewHolder> {
     Context sContext;
-    List<CategoryName> sData;
+    List<CategoryInformation> sData;
     private LinearLayoutManager layoutManager;
 
 
-    public RVScientificAdapter(Context sContext, List<CategoryName> sData) {
+    public RVScientificAdapter(Context sContext, List<CategoryInformation> sData) {
         this.sContext = sContext;
         this.sData = sData;
     }

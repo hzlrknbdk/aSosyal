@@ -11,14 +11,14 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.hzlrknbdk.asosyal.R;
 import com.hzlrknbdk.asosyal.adapters.RVScientificAdapter;
-import com.hzlrknbdk.asosyal.model.CategoryName;
+import com.hzlrknbdk.asosyal.model.CategoryInformation;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class ScientificFragment extends Fragment {
     View v;
-    private List<CategoryName> lstScientific;
+    private List<CategoryInformation> lstScientific;
     private RecyclerView sRV;
 
     public ScientificFragment() {
@@ -28,18 +28,18 @@ public class ScientificFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        lstScientific = new ArrayList<>();
-        lstScientific.add(new CategoryName("Bilim Olimpiyatları"));
-        lstScientific.add(new CategoryName("Bilim Şenlikleri"));
-        lstScientific.add(new CategoryName("Bilim Fuarları"));
-        lstScientific.add(new CategoryName("Patent Sahibi Olma"));
-        lstScientific.add(new CategoryName("Bilimsel Toplantılar"));
-        lstScientific.add(new CategoryName("Zekâ Oyunları"));
-        lstScientific.add(new CategoryName("Bilimsel Araştırma Yarışmaları"));
-        lstScientific.add(new CategoryName("Bilimsel Proje Yarışmaları"));
-        lstScientific.add(new CategoryName("Bilişim Teknolojilerine Yönelik Uygulamalar"));
-        lstScientific.add(new CategoryName("Fen, Teknoloji, Mühendislik ve Matematik Alanlarına Yönelik Uygulamalar"));
-
+      /*  lstScientific = new ArrayList<>();
+        lstScientific.add(new CategoryInformation("Bilim Olimpiyatları"));
+        lstScientific.add(new CategoryInformation("Bilim Şenlikleri"));
+        lstScientific.add(new CategoryInformation("Bilim Fuarları"));
+        lstScientific.add(new CategoryInformation("Patent Sahibi Olma"));
+        lstScientific.add(new CategoryInformation("Bilimsel Toplantılar"));
+        lstScientific.add(new CategoryInformation("Zekâ Oyunları"));
+        lstScientific.add(new CategoryInformation("Bilimsel Araştırma Yarışmaları"));
+        lstScientific.add(new CategoryInformation("Bilimsel Proje Yarışmaları"));
+        lstScientific.add(new CategoryInformation("Bilişim Teknolojilerine Yönelik Uygulamalar"));
+        lstScientific.add(new CategoryInformation("Fen, Teknoloji, Mühendislik ve Matematik Alanlarına Yönelik Uygulamalar"));
+*/
     }
 
     @Override

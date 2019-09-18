@@ -48,16 +48,6 @@ public class IntroViewPage extends AppCompatActivity implements View.OnClickList
         });
 
         mPrevBtn.setOnClickListener(v -> mSlideViewPager.setCurrentItem(mCurrentPage - 1));
-       /* mskip.setOnClickListener(v -> {
-            ActionFragment actionFragment = new ActionFragment();
-            FragmentManager fragmentManager = getSupportFragmentManager();
-            assert fragmentManager != null;
-            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-            fragmentTransaction.replace(R.id.intro_container, actionFragment);
-            fragmentTransaction.addToBackStack(null);
-            fragmentTransaction.commit();
-
-        });*/
         mskip.setOnClickListener(this);
 
     }

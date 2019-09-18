@@ -1,68 +1,60 @@
 package com.hzlrknbdk.asosyal.adapters;
 
 import android.content.Context;
-import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.cardview.widget.CardView;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.hzlrknbdk.asosyal.R;
-import com.hzlrknbdk.asosyal.model.CategoryName;
+import com.hzlrknbdk.asosyal.model.CategoryInformation;
+import com.squareup.picasso.Picasso;
 
-import java.util.List;
+import java.util.ArrayList;
 
 public class RVArtAdapter extends RecyclerView.Adapter<RVArtAdapter.ArtViewHolder> {
 
-    Context aContext;
-    List<CategoryName> aData;
-    private LinearLayoutManager layoutManager;
+    Context context;
+    ArrayList<CategoryInformation> categoryInformationList;
 
-    public String[] aColors = {"#683089", "#733597", "#813caa", "#9042bd", "#9b55c3", "#a668ca"};
-
-
-    public RVArtAdapter(Context aContext, List<CategoryName> aData) {
-        this.aContext = aContext;
-        this.aData = aData;
+    public RVArtAdapter(Context context, ArrayList<CategoryInformation> categoryInformations) {
+        this.context = context;
+        this.categoryInformationList = categoryInformations;
     }
-
 
     @NonNull
     @Override
     public ArtViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View v;
-        v = LayoutInflater.from(aContext).inflate(R.layout.item_art, parent, false);
-        ArtViewHolder vHolder = new ArtViewHolder(v);
-        return vHolder;
+
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_art, parent, false);
+        ArtViewHolder vh = null;
+        vh = new ArtViewHolder(v);
+        return vh;
     }
 
     @Override
     public void onBindViewHolder(@NonNull ArtViewHolder holder, int position) {
-        holder.artName.setText(aData.get(position).getName());
-        holder.CV_art.setCardBackgroundColor(Color.parseColor(aColors[position % 6]));
+        holder.name.setText(categoryInformationList.get(position).getName());
+        Picasso.get().load(categoryInformationList.get(position).getImage()).into(holder.icon);
     }
 
     @Override
     public int getItemCount() {
-        return aData.size();
+        return categoryInformationList.size();
     }
 
 
     public static class ArtViewHolder extends RecyclerView.ViewHolder {
-
-        private TextView artName;
-        CardView CV_art;
-
-
+        TextView name;
+        ImageView icon;
         public ArtViewHolder(@NonNull View itemView) {
             super(itemView);
-            artName = itemView.findViewById(R.id.art_name);
-            CV_art = itemView.findViewById(R.id.CV_art);
+            name = itemView.findViewById(R.id.art_name);
+            icon = itemView.findViewById(R.id.art_icon);
         }
     }
 

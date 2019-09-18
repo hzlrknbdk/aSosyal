@@ -1,73 +1,60 @@
 package com.hzlrknbdk.asosyal.adapters;
 
 import android.content.Context;
-import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.cardview.widget.CardView;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.hzlrknbdk.asosyal.R;
-import com.hzlrknbdk.asosyal.model.CategoryName;
+import com.hzlrknbdk.asosyal.model.CategoryInformation;
+import com.squareup.picasso.Picasso;
 
-import java.util.List;
+import java.util.ArrayList;
 
-public class RVSportyAdapter extends RecyclerView.Adapter<RVSportyAdapter.SportyVievHolder> {
+public class RVSportyAdapter extends RecyclerView.Adapter<RVSportyAdapter.SportyViewHolder> {
+    Context context;
+    ArrayList<CategoryInformation> categoryInformationList;
 
-    Context spContext;
-    List<CategoryName> spData;
-    private LinearLayoutManager layoutManager;
+    public RVSportyAdapter(Context c, ArrayList<CategoryInformation> categoryInformations) {
+        context = c;
+        categoryInformationList = categoryInformations;
 
-    public String[] spColors = {"#683089", "#733597", "#813caa", "#9042bd", "#9b55c3", "#a668ca"};
-
-
-    public RVSportyAdapter(Context spContext, List<CategoryName> spData) {
-        this.spContext = spContext;
-        this.spData = spData;
     }
-
 
     @NonNull
     @Override
-    public SportyVievHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View v;
-        v = LayoutInflater.from(spContext).inflate(R.layout.item_sporty, parent, false);
-        SportyVievHolder vHolder = new SportyVievHolder(v);
-        return vHolder;
+    public SportyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_sporty, parent, false);
+        SportyViewHolder vh = null;
+        vh = new SportyViewHolder(v);
+        return vh;
     }
 
     @Override
-    public void onBindViewHolder(@NonNull SportyVievHolder holder, int position) {
-        holder.sportyName.setText(spData.get(position).getName());
-        holder.cardView.setCardBackgroundColor(Color.parseColor(spColors[position % 6]));
-    }
-    public void setLayoutManager(LinearLayoutManager layoutManager) {
-
-        this.layoutManager = layoutManager;
+    public void onBindViewHolder(@NonNull SportyViewHolder holder, int position) {
+        holder.name.setText(categoryInformationList.get(position).getName());
+        Picasso.get().load(categoryInformationList.get(position).getImage()).into(holder.icon);
     }
 
-    public LinearLayoutManager getLayoutManager() {
-        return layoutManager;
-    }
     @Override
     public int getItemCount() {
-        return spData.size();
+        return categoryInformationList.size();
     }
 
-    public static class SportyVievHolder extends RecyclerView.ViewHolder {
+    class SportyViewHolder extends RecyclerView.ViewHolder {
+        TextView name;
+        ImageView icon;
 
-        private TextView sportyName;
-        CardView cardView;
-
-        public SportyVievHolder(@NonNull View itemView) {
+        public SportyViewHolder(@NonNull View itemView) {
             super(itemView);
-            sportyName = itemView.findViewById(R.id.sporty_name);
-            cardView = itemView.findViewById(R.id.CV_sporty);
+            name = itemView.findViewById(R.id.sporty_name);
+            icon = itemView.findViewById(R.id.sporty_icon);
         }
     }
 }
