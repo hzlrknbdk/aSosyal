@@ -7,64 +7,48 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.hzlrknbdk.asosyal.R;
 import com.hzlrknbdk.asosyal.model.CategoryInformation;
 
-import java.util.List;
+import java.util.ArrayList;
 
 public class RVCommunityAdapter extends RecyclerView.Adapter<RVCommunityAdapter.CommunityServiceVievHolder> {
     Context csaContext;
-    List<CategoryInformation> csaData;
-    private LinearLayoutManager layoutManager;
+    ArrayList<CategoryInformation> categoryInformationList;
 
-    // public String[] csaColors = {"#683089", "#733597", "#813caa", "#9042bd", "#9b55c3", "#a668ca"};
-
-    public RVCommunityAdapter(Context csaContext, List<CategoryInformation> csaData) {
+    public RVCommunityAdapter(Context csaContext, ArrayList<CategoryInformation> categoryInformations) {
         this.csaContext = csaContext;
-        this.csaData = csaData;
+        this.categoryInformationList = categoryInformations;
     }
 
     @NonNull
     @Override
     public CommunityServiceVievHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View v;
-        v = LayoutInflater.from(csaContext).inflate(R.layout.item_csa, parent, false);
-        CommunityServiceVievHolder vHolder = new CommunityServiceVievHolder(v);
-        return vHolder;
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_csa, parent, false);
+        CommunityServiceVievHolder vh = null;
+        vh = new CommunityServiceVievHolder(v);
+        return vh;
     }
 
     @Override
     public void onBindViewHolder(@NonNull CommunityServiceVievHolder holder, int position) {
-        holder.csaName.setText(csaData.get(position).getName());
-        //   holder.CV_csa.setCardBackgroundColor(Color.parseColor(csaColors[position % 6]));
-    }
-
-    public void setLayoutManager(LinearLayoutManager layoutManager) {
-
-        this.layoutManager = layoutManager;
-    }
-
-    public LinearLayoutManager getLayoutManager() {
-        return layoutManager;
+        holder.name.setText(categoryInformationList.get(position).getName());
     }
 
     @Override
     public int getItemCount() {
-        return csaData.size();
+        return categoryInformationList.size();
     }
 
     public static class CommunityServiceVievHolder extends RecyclerView.ViewHolder {
-        private TextView csaName;
-        //  CardView CV_csa;
+        TextView name;
 
 
         public CommunityServiceVievHolder(@NonNull View itemView) {
             super(itemView);
-            csaName = itemView.findViewById(R.id.csa_name);
-            //    CV_csa = itemView.findViewById(R.id.CV_csa);
+            name = itemView.findViewById(R.id.csa_name);
         }
     }
 

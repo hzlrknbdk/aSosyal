@@ -7,7 +7,7 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
         android:layout_width="170dp"
-        android:layout_height="150dp"
+        android:layout_height="130dp"
         android:layout_margin="5dp"
         android:padding="@dimen/padding_4"
         app:cardBackgroundColor="@color/colorBackground"
@@ -21,9 +21,8 @@
 
             <ImageView
                 android:id="@+id/institutions_icon"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:padding="5dp" />
+                android:layout_width="65dp"
+                android:layout_height="65dp"/>
 
             <TextView
                 android:id="@+id/institutions_name"
@@ -32,7 +31,6 @@
                 android:layout_gravity="center"
                 android:fontFamily="Font_family_light"
                 android:gravity="center"
-                android:padding="5dp"
                 android:text="Deneme"
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="@dimen/text_14" />

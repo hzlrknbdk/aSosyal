@@ -5,26 +5,37 @@
     android:layout_height="wrap_content">
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/CV_scientific"
         android:layout_width="170dp"
-        android:layout_height="120dp"
+        android:layout_height="130dp"
         android:layout_margin="5dp"
         android:padding="@dimen/padding_4"
-        app:cardBackgroundColor="#37C47A"
+        app:cardBackgroundColor="@color/colorBackground"
         app:cardCornerRadius="10dp">
 
-        <TextView
-            android:id="@+id/scientific_name"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:fontFamily="Font_family_light"
+            android:layout_height="match_parent"
             android:gravity="center"
-            android:padding="5dp"
-            android:text="Deneme"
-            android:textColor="@color/card_bg_color"
-            android:textSize="@dimen/text_14" />
+            android:orientation="vertical">
 
+            <ImageView
+                android:id="@+id/scientific_icon"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:padding="5dp" />
+
+            <TextView
+                android:id="@+id/scientific_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="Font_family_light"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="Deneme"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/text_14" />
+        </LinearLayout>
     </androidx.cardview.widget.CardView>
 
 

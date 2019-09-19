@@ -35,18 +35,20 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
+
                 <fragment
                     android:id="@+id/institutions_fragment"
                     android:name="com.hzlrknbdk.asosyal.fragments.actionfragment.InstitutionsFragment"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="@dimen/margin_top_16" />
+
                 <fragment
                     android:id="@+id/sporty_fragment"
                     android:name="com.hzlrknbdk.asosyal.fragments.actionfragment.SportyFragment"
                     android:layout_width="match_parent"
                     android:layout_height="320dp"
-                    android:layout_marginBottom="@dimen/margin_top_16"/>
+                    android:layout_marginBottom="@dimen/margin_top_16" />
 
                 <fragment
                     android:id="@+id/cultural_fragment"
@@ -54,28 +56,28 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="@dimen/margin_top_16" />
-             <fragment
+
+                <fragment
                     android:id="@+id/art_fragment"
                     android:name="com.hzlrknbdk.asosyal.fragments.actionfragment.ArtFragment"
                     android:layout_width="match_parent"
-                    android:layout_height="320dp"
+                    android:layout_height="270dp"
                     android:layout_marginBottom="@dimen/margin_top_16" />
 
-                <!--          <fragment
-                           android:id="@+id/scientific_fragment"
-                           android:name="com.hzlrknbdk.asosyal.fragments.actionfragment.ScientificFragment"
-                           android:layout_width="match_parent"
-                           android:layout_height="wrap_content"
-                           android:layout_marginBottom="@dimen/margin_top_16" />
+                <fragment
+                    android:id="@+id/scientific_fragment"
+                    android:name="com.hzlrknbdk.asosyal.fragments.actionfragment.ScientificFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_top_16" />
 
+                <fragment
+                    android:id="@+id/community_service_fragment"
+                    android:name="com.hzlrknbdk.asosyal.fragments.actionfragment.CommunityServiceFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="290dp"
+                    android:layout_marginBottom="@dimen/margin_top_16" />
 
-                       <fragment
-                           android:id="@+id/community_service_fragment"
-                           android:name="com.hzlrknbdk.asosyal.fragments.actionfragment.CommunityServiceFragment"
-                           android:layout_width="match_parent"
-                           android:layout_height="290dp"
-                           android:layout_marginBottom="@dimen/margin_top_16" />
-       -->
             </LinearLayout>
 
         </ScrollView>
