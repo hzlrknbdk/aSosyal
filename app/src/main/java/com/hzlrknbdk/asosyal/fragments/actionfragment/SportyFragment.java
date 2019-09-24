@@ -24,7 +24,6 @@ import java.util.ArrayList;
 
 public class SportyFragment extends Fragment {
 
-
     private DatabaseReference reference;
     private RecyclerView RVsporty;
     private ArrayList<CategoryInformation> categoryInformationList;
@@ -33,7 +32,6 @@ public class SportyFragment extends Fragment {
     public SportyFragment() {
 
     }
-
 
     @Override
     public void onCreate(Bundle savedInstanceState) {

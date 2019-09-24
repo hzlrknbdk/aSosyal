@@ -118,7 +118,6 @@
                         android:textSize="@dimen/text_16"
                         tools:ignore="SpUsage" />
 
-
                     <View
                         style="@style/Normal_Margin_Style"
                         android:layout_width="match_parent"
@@ -149,31 +148,6 @@
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/dimen_1"
                         android:background="@color/view_line" />
-                    <!--
-                                        <EditText
-                                            android:id="@+id/createAccount_passwordAgain"
-                                            style="@style/Font_family_light"
-                                            android:layout_width="match_parent"
-                                            android:layout_height="wrap_content"
-                                            android:background="@color/transparent"
-                                            android:drawableStart="@drawable/password"
-                                            android:drawableLeft="@drawable/password"
-                                            android:drawablePadding="@dimen/padding_8"
-                                            android:hint="@string/sifre_tekrar"
-                                            android:inputType="textPassword"
-                                            android:maxLines="1"
-                                            android:padding="@dimen/padding_16"
-                                            android:textColor="@color/white"
-                                            android:textColorHint="@color/white"
-                                            android:textSize="@dimen/text_16"
-                                            tools:ignore="SpUsage" />
-
-                                        <View
-                                            style="@style/Normal_Margin_Style"
-                                            android:layout_width="match_parent"
-                                            android:layout_height="@dimen/dimen_1"
-                                            android:background="@color/view_line" />-->
-
 
                 </LinearLayout>
 

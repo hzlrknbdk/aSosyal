@@ -36,46 +36,6 @@ public class ArtFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-       /* lstArt = new ArrayList<>();
-        lstArt.add(new CategoryInformation("Resim"));
-        lstArt.add(new CategoryInformation("Koro"));
-        lstArt.add(new CategoryInformation("Yabancı Dil Etkinlikleri"));
-        lstArt.add(new CategoryInformation("Özgün Baskı Resmi"));
-        lstArt.add(new CategoryInformation("Heykel"));
-        lstArt.add(new CategoryInformation("Üflemeli Çalgılar"));
-        lstArt.add(new CategoryInformation("Mekan Sanatları"));
-        lstArt.add(new CategoryInformation("Maket"));
-        lstArt.add(new CategoryInformation("Seramik"));
-        lstArt.add(new CategoryInformation("Grafik Sanatlar"));
-        lstArt.add(new CategoryInformation("Geleneksel Türk Sanatları"));
-        lstArt.add(new CategoryInformation("Tiyatro"));
-        lstArt.add(new CategoryInformation("Rölyef"));
-        lstArt.add(new CategoryInformation("Vurmalı Çalgılar"));
-        lstArt.add(new CategoryInformation("Hikaye/Tiyatro Metni/ Roman"));
-        lstArt.add(new CategoryInformation("Bale"));
-        lstArt.add(new CategoryInformation("Çini"));
-        lstArt.add(new CategoryInformation("Yaylı Çalgılar"));
-        lstArt.add(new CategoryInformation("Mızraplı/Tezeneli Çalgılar"));
-        lstArt.add(new CategoryInformation("Opera"));
-        lstArt.add(new CategoryInformation("Origami"));
-        lstArt.add(new CategoryInformation("Tuşlu Çalgılar"));
-        lstArt.add(new CategoryInformation("Deneme /Makale / Fıkra"));
-        lstArt.add(new CategoryInformation("Drama"));
-        lstArt.add(new CategoryInformation("Orkestra"));
-        lstArt.add(new CategoryInformation("Şiir(Sözlü Anlatım)"));
-        lstArt.add(new CategoryInformation("Mektup / Günlük / Anı"));
-        lstArt.add(new CategoryInformation("Sinema"));
-        lstArt.add(new CategoryInformation("Şiir(Yazılı Anlatım)"));
-        lstArt.add(new CategoryInformation("Münazara"));
-        lstArt.add(new CategoryInformation("Konferans/Panel / Forum"));
-        lstArt.add(new CategoryInformation("Fabl / Masal"));
-        lstArt.add(new CategoryInformation("Şan (Solo)"));
-        lstArt.add(new CategoryInformation("Sunuculuk"));
-        lstArt.add(new CategoryInformation("Sohbet / Eleştiri / Gezi Yazısı"));
-        lstArt.add(new CategoryInformation("Mask"));
-        lstArt.add(new CategoryInformation("Mülakat/Röportaj"));
-        lstArt.add(new CategoryInformation("Biyografi / Otobiyografi"));
-        lstArt.add(new CategoryInformation("Oratoryo"));*/
     }
 
     @Override

@@ -51,7 +51,6 @@ public class InstitutionsFragment extends Fragment {
                     CategoryInformation information = dataSnapshot1.getValue(CategoryInformation.class);
                     categoryInformationList.add(information);
                 }
-
                 RVCategoryAdapter institutionsAdapter = new RVCategoryAdapter(getContext(), categoryInformationList);
                 LinearLayoutManager linearHorizontal = new LinearLayoutManager(InstitutionsFragment.this.getContext(), LinearLayoutManager.VERTICAL, false);
                 institutionsAdapter.setLayoutManager(linearHorizontal);
@@ -62,6 +61,7 @@ public class InstitutionsFragment extends Fragment {
             public void onCancelled(@NonNull DatabaseError databaseError) {
                 Toast.makeText(InstitutionsFragment.this.getContext(), "Oppsss", Toast.LENGTH_SHORT).show();
             }
+
         });
 
         return v;

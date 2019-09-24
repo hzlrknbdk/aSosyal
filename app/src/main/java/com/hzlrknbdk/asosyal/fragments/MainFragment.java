@@ -70,13 +70,14 @@ public class MainFragment extends Fragment implements View.OnClickListener {
             auth.signInWithEmailAndPassword(txt_email, txt_password)
                     .addOnCompleteListener(task -> {
                         if (task.isSuccessful()) {
-                            ParentsHomePageFragment parentsHomePageFragment = new ParentsHomePageFragment();
+                            HomePageFragment homePageFragment = new HomePageFragment();
                             FragmentManager fragmentManager = getFragmentManager();
                             assert fragmentManager != null;
                             FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                            fragmentTransaction.replace(R.id.container, parentsHomePageFragment);
+                            fragmentTransaction.replace(R.id.actionfragment, homePageFragment);
                             fragmentTransaction.addToBackStack(null);
                             fragmentTransaction.commit();
+
                         } else {
                             Toast.makeText(MainFragment.this.getContext(), "Authentication failed!", Toast.LENGTH_SHORT).show();
 
@@ -93,7 +94,7 @@ public class MainFragment extends Fragment implements View.OnClickListener {
         FragmentManager fragmentManager = getFragmentManager();
         assert fragmentManager != null;
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.container, createAccountFragment);
+        fragmentTransaction.replace(R.id.actionfragment, createAccountFragment);
         fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit();
 
@@ -105,7 +106,7 @@ public class MainFragment extends Fragment implements View.OnClickListener {
         FragmentManager fragmentManager = getFragmentManager();
         assert fragmentManager != null;
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.container, actionFragment);
+        fragmentTransaction.replace(R.id.actionfragment, actionFragment);
         fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit();
 

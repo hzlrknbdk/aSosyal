@@ -146,7 +146,7 @@ public class CreateAccountFragment extends Fragment implements View.OnClickListe
         FragmentManager fragmentManager = getFragmentManager();
         assert fragmentManager != null;
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.container, mainFragment);
+        fragmentTransaction.replace(R.id.actionfragment, mainFragment);
         fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit();
     }

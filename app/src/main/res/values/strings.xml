@@ -26,5 +26,11 @@
     <string name="geri">Geri</string>
     <string name="ileri">İleri</string>
     <string name="atla">Atla</string>
+    <string name="etkinlik_adi">ETKİNLİK ADI</string>
+    <string name="sehir">ŞEHİR</string>
+    <string name="organize_eden">ORGANİZE EDEN</string>
+    <string name="tarih">TARİH</string>
+    <string name="detaylari_gor">Detayları Gör</string>
+    <string name="okul">OKUL</string>
 
 </resources>

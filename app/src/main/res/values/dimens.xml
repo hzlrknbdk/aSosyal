@@ -62,5 +62,7 @@
     <dimen name="margin_40">40dp</dimen>
     <dimen name="margin_30">30dp</dimen>
     <dimen name="padding_20">20dp</dimen>
+    <dimen name="padding_30">30dp</dimen>
+    <dimen name="margin_6">6dp</dimen>
 
 </resources>

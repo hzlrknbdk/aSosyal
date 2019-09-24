@@ -1,4 +1,4 @@
-package com.hzlrknbdk.asosyal.fragments.actionfragment;
+package com.hzlrknbdk.asosyal.fragments;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -17,20 +17,20 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.hzlrknbdk.asosyal.R;
-import com.hzlrknbdk.asosyal.adapters.RVCommunityAdapter;
-import com.hzlrknbdk.asosyal.model.CategoryInformation;
+import com.hzlrknbdk.asosyal.adapters.TabOneAdapter;
+import com.hzlrknbdk.asosyal.model.OrganizationDetails;
 
 import java.util.ArrayList;
 
 
-public class CommunityServiceFragment extends Fragment {
-    private DatabaseReference reference;
-    private RecyclerView RVcsa;
-    private ArrayList<CategoryInformation> categoryInformationList;
-    private RVCommunityAdapter communityAdapter;
+public class InstitutionsTabOne extends Fragment {
+
+    private RecyclerView RVtabone;
+    private ArrayList<OrganizationDetails> organizationDetailsList;
+    private TabOneAdapter tabOneAdapter;
 
 
-    public CommunityServiceFragment() {
+    public InstitutionsTabOne() {
 
     }
 
@@ -44,30 +44,33 @@ public class CommunityServiceFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        View v = inflater.inflate(R.layout.fragment_community, container, false);
-        RVcsa = v.findViewById(R.id.rv_csa);
-        RVcsa.setLayoutManager(new GridLayoutManager(this.getContext(), 1));
-        categoryInformationList = new ArrayList<CategoryInformation>();
+        View view = inflater.inflate(R.layout.fragment_institutions_tab_one, container, false);
+
+        RVtabone = view.findViewById(R.id.rv_tabone);
+        RVtabone.setLayoutManager(new GridLayoutManager(this.getContext(), 1));
+        organizationDetailsList = new ArrayList<OrganizationDetails>();
         FirebaseDatabase database = FirebaseDatabase.getInstance();
-        reference = database.getReference().child("Category").child("Community");
+        DatabaseReference reference = database.getReference().child("Organizations");
         reference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 for (DataSnapshot dataSnapshot1 : dataSnapshot.getChildren()) {
-                    CategoryInformation information = dataSnapshot1.getValue(CategoryInformation.class);
-                    categoryInformationList.add(information);
+                    OrganizationDetails information = dataSnapshot1.getValue(OrganizationDetails.class);
+                    organizationDetailsList.add(information);
                 }
-                communityAdapter = new RVCommunityAdapter(CommunityServiceFragment.this.getContext(), categoryInformationList);
-                RVcsa.setAdapter(communityAdapter);
+
+                tabOneAdapter = new TabOneAdapter(InstitutionsTabOne.this.getContext(), organizationDetailsList);
+                RVtabone.setAdapter(tabOneAdapter);
             }
 
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
-                Toast.makeText(CommunityServiceFragment.this.getContext(), "Oppsss", Toast.LENGTH_SHORT).show();
+                Toast.makeText(InstitutionsTabOne.this.getContext(), "Oppsss", Toast.LENGTH_SHORT).show();
             }
         });
-        return v;
-    }
 
+
+        return view;
+    }
 
 }

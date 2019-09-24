@@ -33,18 +33,6 @@ public class ScientificFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-      /*  lstScientific = new ArrayList<>();
-        lstScientific.add(new CategoryInformation("Bilim Olimpiyatları"));
-        lstScientific.add(new CategoryInformation("Bilim Şenlikleri"));
-        lstScientific.add(new CategoryInformation("Bilim Fuarları"));
-        lstScientific.add(new CategoryInformation("Patent Sahibi Olma"));
-        lstScientific.add(new CategoryInformation("Bilimsel Toplantılar"));
-        lstScientific.add(new CategoryInformation("Zekâ Oyunları"));
-        lstScientific.add(new CategoryInformation("Bilimsel Araştırma Yarışmaları"));
-        lstScientific.add(new CategoryInformation("Bilimsel Proje Yarışmaları"));
-        lstScientific.add(new CategoryInformation("Bilişim Teknolojilerine Yönelik Uygulamalar"));
-        lstScientific.add(new CategoryInformation("Fen, Teknoloji, Mühendislik ve Matematik Alanlarına Yönelik Uygulamalar"));
-*/
     }
 
     @Override
