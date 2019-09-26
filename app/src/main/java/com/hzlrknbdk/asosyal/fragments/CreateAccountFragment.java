@@ -20,6 +20,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.FirebaseDatabase;
 import com.hzlrknbdk.asosyal.R;
+import com.hzlrknbdk.asosyal.fragments.actionfragment.AccountActiveFragment;
 import com.hzlrknbdk.asosyal.model.User;
 
 
@@ -142,11 +143,11 @@ public class CreateAccountFragment extends Fragment implements View.OnClickListe
     }
 
     private void redirectToLogin() {
-        MainFragment mainFragment = new MainFragment();
+        AccountActiveFragment accountActiveFragment = new AccountActiveFragment();
         FragmentManager fragmentManager = getFragmentManager();
         assert fragmentManager != null;
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.actionfragment, mainFragment);
+        fragmentTransaction.replace(R.id.actionfragment, accountActiveFragment);
         fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit();
     }

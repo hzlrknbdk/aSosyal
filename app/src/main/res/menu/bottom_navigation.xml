@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/ic_home"
+        android:title="@string/ana_sayfa" />
+
+    <item
+        android:id="@+id/nav_notifications"
+        android:icon="@drawable/ic_format_list_bulleted_black"
+        android:title="@string/bildirimler" />
+    <item
+        android:id="@+id/nav_search"
+        android:icon="@drawable/ic_search_black"
+        android:title="@string/arama" />
+
+    <item
+        android:id="@+id/nav_like"
+        android:icon="@drawable/ic_bubble_chart_black"
+        android:title="@string/kaydedilenler" />
+
+    <item
+        android:id="@+id/nav_person"
+        android:icon="@drawable/ic_person_black"
+        android:title="@string/hesabim" />
+
+</menu>

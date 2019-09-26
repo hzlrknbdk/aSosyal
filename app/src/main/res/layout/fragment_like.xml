@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.navigationbarfragment.LikeFragment"
+    android:background="@color/blue_grey_light">
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_left_16"
+        android:layout_marginTop="@dimen/margin_top_16"
+        android:layout_marginRight="@dimen/margin_right_8"
+        android:layout_marginBottom="@dimen/margin_bottom_16"
+        android:background="@drawable/action_search_input_style"
+        android:drawableLeft="@drawable/ic_search_gray_24dp"
+        android:drawablePadding="@dimen/padding_8"
+        android:ems="20"
+        android:hint="@string/arama"
+        android:inputType="textPersonName"
+        android:textColor="@color/content_text_color" />
+</FrameLayout>

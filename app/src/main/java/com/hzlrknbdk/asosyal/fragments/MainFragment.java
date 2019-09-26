@@ -14,6 +14,7 @@ import androidx.fragment.app.FragmentTransaction;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.hzlrknbdk.asosyal.R;
+import com.hzlrknbdk.asosyal.fragments.actionfragment.AccountActiveFragment;
 import com.hzlrknbdk.asosyal.fragments.actionfragment.ActionFragment;
 
 
@@ -70,11 +71,11 @@ public class MainFragment extends Fragment implements View.OnClickListener {
             auth.signInWithEmailAndPassword(txt_email, txt_password)
                     .addOnCompleteListener(task -> {
                         if (task.isSuccessful()) {
-                            HomePageFragment homePageFragment = new HomePageFragment();
+                            AccountActiveFragment accountActiveFragment = new AccountActiveFragment();
                             FragmentManager fragmentManager = getFragmentManager();
                             assert fragmentManager != null;
                             FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                            fragmentTransaction.replace(R.id.actionfragment, homePageFragment);
+                            fragmentTransaction.replace(R.id.actionfragment, accountActiveFragment);
                             fragmentTransaction.addToBackStack(null);
                             fragmentTransaction.commit();
 

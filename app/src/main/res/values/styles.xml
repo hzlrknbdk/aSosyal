@@ -21,4 +21,9 @@
     <style name="Font_family_regular" parent="AppTheme">
         <item name="android:fontFamily">sans-serif-regular</item>
     </style>
+
+    <style name="BottomMenuColor" parent="Theme.AppCompat.DayNight.DarkActionBar">
+        <item name="android:textColorSecondary">@android:color/white</item>
+    </style>
+
 </resources>

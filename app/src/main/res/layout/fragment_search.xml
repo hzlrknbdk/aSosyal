@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".fragments.navigationbarfragment.SearchFragment">
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_left_16"
+        android:layout_marginLeft="@dimen/margin_left_16"
+        android:layout_marginTop="@dimen/margin_top_16"
+        android:layout_marginEnd="@dimen/margin_right_8"
+        android:layout_marginRight="@dimen/margin_right_8"
+        android:layout_marginBottom="@dimen/margin_bottom_16"
+        android:background="@drawable/action_search_input_style"
+        android:drawableStart="@drawable/ic_search_gray_24dp"
+        android:drawableLeft="@drawable/ic_search_gray_24dp"
+        android:drawablePadding="@dimen/padding_8"
+        android:ems="20"
+        android:hint="@string/arama"
+        android:inputType="textPersonName"
+        android:textColor="@color/content_text_color" />
+
+    <androidx.recyclerview.widget.RecyclerView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/rv_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+</LinearLayout>
