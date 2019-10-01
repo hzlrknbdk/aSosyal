@@ -1,16 +1,19 @@
 package com.hzlrknbdk.asosyal.adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.hzlrknbdk.asosyal.R;
+import com.hzlrknbdk.asosyal.activities.DetailsOfOrganizations;
 import com.hzlrknbdk.asosyal.model.CategoryInformation;
 import com.squareup.picasso.Picasso;
 
@@ -40,6 +43,15 @@ public class RVSportyAdapter extends RecyclerView.Adapter<RVSportyAdapter.Sporty
     public void onBindViewHolder(@NonNull SportyViewHolder holder, int position) {
         holder.name.setText(categoryInformationList.get(position).getName());
         Picasso.get().load(categoryInformationList.get(position).getImage()).into(holder.icon);
+        holder.item.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //  Toast.makeText(mContext, "Test Click " + holder.getAdapterPosition(), Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(v.getContext(), DetailsOfOrganizations.class);
+                v.getContext().startActivity(intent);
+
+            }
+        });
     }
 
     @Override
@@ -50,11 +62,14 @@ public class RVSportyAdapter extends RecyclerView.Adapter<RVSportyAdapter.Sporty
     class SportyViewHolder extends RecyclerView.ViewHolder {
         TextView name;
         ImageView icon;
+        private LinearLayout item;
 
         public SportyViewHolder(@NonNull View itemView) {
             super(itemView);
             name = itemView.findViewById(R.id.sporty_name);
             icon = itemView.findViewById(R.id.sporty_icon);
+            item = itemView.findViewById(R.id.items_Sporty);
+
         }
     }
 }

@@ -187,7 +187,7 @@
                         android:gravity="right|center"
                         android:text="Zaten bir hesabım var!"
                         android:textColor="@color/white"
-                        android:textSize="@dimen/text_14" />
+                        android:textSize="@dimen/text_16" />
 
 
                 </LinearLayout>

@@ -33,6 +33,7 @@ public class RVArtAdapter extends RecyclerView.Adapter<RVArtAdapter.ArtViewHolde
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_art, parent, false);
         ArtViewHolder vh = null;
         vh = new ArtViewHolder(v);
+
         return vh;
     }
 

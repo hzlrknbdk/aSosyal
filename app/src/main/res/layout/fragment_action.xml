@@ -14,42 +14,37 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_height="wrap_content">
 
             <EditText
                 android:id="@+id/editText"
-                android:layout_width="320dp"
+                android:layout_width="280dp"
                 android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
                 android:layout_marginLeft="@dimen/margin_left_16"
                 android:layout_marginTop="@dimen/margin_top_16"
                 android:layout_marginBottom="@dimen/margin_bottom_16"
-                android:layout_alignParentLeft="true"
                 android:background="@drawable/action_search_input_style"
+                android:drawableStart="@drawable/ic_search_gray_24dp"
                 android:drawableLeft="@drawable/ic_search_gray_24dp"
                 android:drawablePadding="@dimen/padding_8"
                 android:ems="20"
                 android:hint="@string/arama"
                 android:inputType="textPersonName"
-                android:textColor="@color/content_text_color"
-                android:layout_marginStart="@dimen/margin_left_16"
-                android:layout_alignParentStart="true"
-                android:drawableStart="@drawable/ic_search_gray_24dp" />
+                android:textColor="@color/content_text_color" />
 
             <Button
                 android:id="@+id/loginAccount"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_marginTop="@dimen/margin_top_16"
-                android:layout_marginBottom="@dimen/margin_bottom_16"
-                android:layout_marginRight="@dimen/margin_right_16"
-                android:layout_alignRight="@id/editText"
-                android:layout_alignParentRight="true"
-                android:background="@drawable/ic_account_circle_black_24dp"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
                 android:layout_alignEnd="@id/editText"
+                android:layout_alignRight="@id/editText"
                 android:layout_alignParentEnd="true"
-                android:layout_marginEnd="@dimen/margin_right_16" />
-
+                android:layout_alignParentRight="true"
+                android:layout_margin="16dp"
+                android:background="@drawable/ic_account_circle_black_24dp"
+                android:padding="16dp" />
 
         </RelativeLayout>
 

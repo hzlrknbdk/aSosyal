@@ -1,9 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@color/colorPrimaryDark"
+    android:gravity="right"
+    android:orientation="vertical"
     tools:context=".activities.DetailsOfOrganizations">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="@dimen/margin_left_16"
+            android:layout_marginTop="@dimen/margin_top_16"
+            android:background="@drawable/action_search_input_style"
+            android:drawablePadding="@dimen/padding_8"
+            android:ems="20"
+            android:hint="@string/arama"
+            android:inputType="textPersonName"
+            android:paddingLeft="@dimen/padding_30"
+            android:textColor="@color/content_text_color" />
+
+        <Button
+            android:id="@+id/loginAccount"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignEnd="@id/editText"
+            android:layout_alignRight="@id/editText"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="16dp"
+            android:background="@drawable/ic_search_gray_24dp"
+            android:padding="16dp" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/text_view_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/margin_16dp"
+        android:text="@string/date"
+        android:textColor="@color/sweet_gray"
+        android:textSize="@dimen/text_12" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:tabSelectedTextColor="@color/white"
+        app:tabTextColor="@color/colorPrimary" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/pager_tab"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </androidx.viewpager.widget.ViewPager>
+
+</LinearLayout>

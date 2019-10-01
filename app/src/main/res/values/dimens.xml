@@ -74,6 +74,8 @@
     <dimen name="margin_bottom_12">12dp</dimen>
     <dimen name="margin_top_12">12dp</dimen>
     <dimen name="padding_2dp">2dp</dimen>
+    <dimen name="padding_40">40dp</dimen>
+    <dimen name="text_30">30sp</dimen>
 
 
 </resources>

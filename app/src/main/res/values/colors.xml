@@ -74,6 +74,7 @@
     <color name="category_name_color">#f1f1f1</color>
     <color name="purple">#683089</color>
     <color name="horizontal_cardview_color">#8a8c8f</color>
+    <color name="sweet_gray">#C7C7C7</color>
 
 
 </resources>

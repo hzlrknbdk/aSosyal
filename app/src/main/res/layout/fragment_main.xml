@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/fragmentmain"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragments.MainFragment">
 
     <RelativeLayout
@@ -130,18 +132,34 @@
 
                 </LinearLayout>
 
-
-                <TextView
-                    android:id="@+id/notUser"
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="sans-serif-regular"
+                    android:layout_gravity="center"
                     android:gravity="center"
-                    android:paddingTop="50dp"
-                    android:paddingBottom="@dimen/padding_16"
-                    android:text="Üye olmadan devam et."
-                    android:textColor="#C7C7C7"
-                    android:textSize="@dimen/text_20" />
+                    android:orientation="vertical">
+
+                    <com.google.android.gms.common.SignInButton
+                        android:layout_marginTop="@dimen/margin_16dp"
+                        android:id="@+id/googleLogin"
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"/>
+
+
+                    <TextView
+                        android:id="@+id/notUser"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-regular"
+                        android:gravity="center"
+                        android:paddingTop="@dimen/padding_40"
+                        android:layout_marginTop="@dimen/margin_16dp"
+                        android:paddingBottom="@dimen/padding_16"
+                        android:text="Üye olmadan devam et."
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_16" />
+
+                </LinearLayout>
 
 
             </LinearLayout>
