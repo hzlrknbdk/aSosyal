@@ -56,6 +56,7 @@ public class CreateAccountFragment extends Fragment implements View.OnClickListe
         view.findViewById(R.id.createAccount_btn).setOnClickListener(this);
         view.findViewById(R.id.TV_Signin).setOnClickListener(this);
 
+
         return view;
     }
 
@@ -151,6 +152,7 @@ public class CreateAccountFragment extends Fragment implements View.OnClickListe
         fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit();
     }
+
 
     @Override
     public void onClick(View v) {

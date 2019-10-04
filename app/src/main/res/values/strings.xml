@@ -28,7 +28,6 @@
     <string name="atla">Atla</string>
     <string name="etkinlik_adi">Etkinlik Adı</string>
     <string name="sehir">Şehir</string>
-    <string name="organize_eden">Organize Eden</string>
     <string name="tarih">Tarih</string>
     <string name="detaylari_gor">Detayları Gör</string>
     <string name="okul">Okul</string>
@@ -50,6 +49,12 @@
     <string name="egitim_suresi">Eğitim saat ve gün sayısı</string>
     <string name="kurs_yeri_ad">Kurs İşyeri Adı</string>
     <string name="fiyat">Fiyat</string>
+    <string name="organize_eden">Organize Eden</string>
+    <string name="date_dd_mm_yyyy">DATE- dd/mm/yyyy</string>
+    <string name="saat">SAAT</string>
+    <string name="mekan">Mekan</string>
+    <string name="firma_kayit">Firma Kayıt</string>
+    <string name="zaten_bir_hesabim_var">Zaten bir hesabim var.</string>
 
 
 </resources>

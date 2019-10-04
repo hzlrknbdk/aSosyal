@@ -31,6 +31,7 @@ public class ActionFragment extends Fragment implements View.OnClickListener {
         View view = inflater.inflate(R.layout.fragment_action, container, false);
         loginAccount = view.findViewById(R.id.loginAccount);
         loginAccount.setOnClickListener(this);
+
         return view;
     }
 
@@ -43,6 +44,7 @@ public class ActionFragment extends Fragment implements View.OnClickListener {
         fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit();
     }
+
 
     @Override
     public void onClick(View v) {

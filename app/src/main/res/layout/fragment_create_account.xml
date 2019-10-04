@@ -185,9 +185,10 @@
                         android:layout_weight="1"
                         android:background="@color/transparent"
                         android:gravity="right|center"
-                        android:text="Zaten bir hesabım var!"
+                        android:text="@string/zaten_bir_hesabim_var"
                         android:textColor="@color/white"
-                        android:textSize="@dimen/text_16" />
+                        android:textSize="@dimen/text_16"
+                        tools:ignore="RtlHardcoded" />
 
 
                 </LinearLayout>

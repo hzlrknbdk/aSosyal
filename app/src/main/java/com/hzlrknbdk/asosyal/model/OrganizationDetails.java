@@ -2,18 +2,36 @@ package com.hzlrknbdk.asosyal.model;
 
 public class OrganizationDetails {
 
-    private String organizationName, organizer, city, date, image, school;
+    private String organizationName, organizer, city, date, image, school, place, clock;
 
     public OrganizationDetails() {
     }
 
-    public OrganizationDetails(String organizationName, String organizer, String city, String date, String image, String school) {
+    public OrganizationDetails(String organizationName, String organizer, String city, String date, String image, String school, String place, String clock) {
         this.organizationName = organizationName;
         this.organizer = organizer;
         this.city = city;
         this.date = date;
         this.image = image;
         this.school = school;
+        this.place = place;
+        this.clock = clock;
+    }
+
+    public String getPlace() {
+        return place;
+    }
+
+    public void setPlace(String place) {
+        this.place = place;
+    }
+
+    public String getClock() {
+        return clock;
+    }
+
+    public void setClock(String clock) {
+        this.clock = clock;
     }
 
     public String getSchool() {
