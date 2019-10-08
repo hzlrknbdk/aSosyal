@@ -23,7 +23,7 @@
             android:maxLines="1"
             android:textColor="@color/white"
             android:textSize="@dimen/text_16"
-            android:text="Line one"
+            android:text="@string/line_one"
             android:visibility="visible" />
     </androidx.appcompat.widget.Toolbar>
 

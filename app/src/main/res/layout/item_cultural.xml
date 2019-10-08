@@ -7,10 +7,10 @@
     <androidx.cardview.widget.CardView
         android:layout_width="170dp"
         android:layout_height="130dp"
-        android:layout_margin="5dp"
+        android:layout_margin="@dimen/margin_5"
         android:padding="@dimen/padding_4"
         app:cardBackgroundColor="@color/colorBackground"
-        app:cardCornerRadius="10dp">
+        app:cardCornerRadius="@dimen/radius_10">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -20,9 +20,9 @@
 
             <ImageView
                 android:id="@+id/cultural_icon"
-                android:layout_width="65dp"
-                android:layout_height="65dp"
-                android:padding="5dp" />
+                android:layout_width="@dimen/dp65"
+                android:layout_height="@dimen/dp65"
+                android:padding="@dimen/padding_5" />
 
             <TextView
                 android:id="@+id/cultural_name"
@@ -31,8 +31,8 @@
                 android:layout_gravity="center"
                 android:fontFamily="Font_family_light"
                 android:gravity="center"
-                android:padding="5dp"
-                android:text="Deneme"
+                android:padding="@dimen/padding_5"
+                android:text="@string/deneme"
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="@dimen/text_14" />
         </LinearLayout>

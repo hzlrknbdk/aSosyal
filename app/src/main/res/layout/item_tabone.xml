@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/margin_6"
         app:cardBackgroundColor="@color/cardviewback"
-        app:cardCornerRadius="15dp">
+        app:cardCornerRadius="@dimen/radius_15">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -54,7 +54,8 @@
                     android:layout_marginRight="@dimen/margin_12"
                     android:text="@string/sehir"
                     android:textColor="@color/white"
-                    android:textSize="@dimen/text_12" />
+                    android:textSize="@dimen/text_12"
+                    android:layout_marginEnd="@dimen/margin_12" />
 
                 <TextView
                     android:id="@+id/organizer"
@@ -92,7 +93,7 @@
                     android:layout_gravity="center"
                     android:layout_marginStart="@dimen/margin_left_8"
                     android:layout_marginLeft="@dimen/margin_left_8"
-                    android:layout_marginTop="60dp"
+                    android:layout_marginTop="@dimen/margin_60"
                     android:layout_marginEnd="@dimen/margin_right_8"
                     android:layout_marginRight="@dimen/margin_right_8"
                     android:layout_marginBottom="@dimen/margin_bottom_8"

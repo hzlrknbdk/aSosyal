@@ -9,10 +9,10 @@
         android:id="@+id/CV_sporty"
         android:layout_width="170dp"
         android:layout_height="wrap_content"
-        android:layout_margin="5dp"
+        android:layout_margin="@dimen/margin_5"
        app:cardBackgroundColor="@color/colorPrimaryDark"
         android:padding="@dimen/padding_4"
-        app:cardCornerRadius="10dp">
+        app:cardCornerRadius="@dimen/radius_10">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -22,9 +22,9 @@
 
             <ImageView
                 android:id="@+id/sporty_icon"
-                android:padding="5dp"
-                android:layout_width="50dp"
-                android:layout_height="50dp" />
+                android:padding="@dimen/padding_5"
+                android:layout_width="@dimen/dp50"
+                android:layout_height="@dimen/dp50" />
             <TextView
                 android:id="@+id/sporty_name"
                 android:layout_width="match_parent"
@@ -32,8 +32,8 @@
                 android:layout_gravity="center"
                 android:fontFamily="Font_family_light"
                 android:gravity="center"
-                android:padding="5dp"
-                android:text="Category Name"
+                android:padding="@dimen/padding_5"
+                android:text="@string/category_name"
                 android:textColor="@color/card_bg_color"
                 android:textSize="@dimen/text_14" />
         </LinearLayout>

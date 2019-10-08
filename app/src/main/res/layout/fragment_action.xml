@@ -22,6 +22,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentLeft="true"
+                android:layout_marginStart="@dimen/margin_left_16"
                 android:layout_marginLeft="@dimen/margin_left_16"
                 android:layout_marginTop="@dimen/margin_top_16"
                 android:layout_marginBottom="@dimen/margin_bottom_16"
@@ -36,15 +37,15 @@
 
             <Button
                 android:id="@+id/loginAccount"
-                android:layout_width="45dp"
-                android:layout_height="45dp"
+                android:layout_width="@dimen/dp45"
+                android:layout_height="@dimen/dp45"
                 android:layout_alignEnd="@id/editText"
                 android:layout_alignRight="@id/editText"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true"
-                android:layout_margin="16dp"
+                android:layout_margin="@dimen/margin_16dp"
                 android:background="@drawable/ic_account_circle_black_24dp"
-                android:padding="16dp" />
+                android:padding="@dimen/padding_16" />
 
         </RelativeLayout>
 

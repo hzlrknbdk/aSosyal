@@ -15,7 +15,7 @@
         android:layout_marginRight="@dimen/margin_12"
         android:layout_marginBottom="@dimen/margin_bottom_4"
         app:cardBackgroundColor="@color/cardviewback"
-        app:cardCornerRadius="5dp">
+        app:cardCornerRadius="@dimen/radius_5">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -28,14 +28,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-
                 <de.hdodenhof.circleimageview.CircleImageView
                     android:id="@+id/profileImage"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
+                    android:layout_width="@dimen/dp50"
+                    android:layout_height="@dimen/dp50"
                     android:layout_margin="@dimen/margin_8"
                     app:civ_border_color="@color/colorPrimaryDark"
-                    app:civ_border_width="2dp" />
+                    app:civ_border_width="@dimen/dp2" />
 
 
                 <TextView
@@ -122,7 +121,9 @@
                 android:layout_height="200dp"
                 android:layout_marginLeft="@dimen/margin_left_16"
                 android:layout_marginRight="@dimen/margin_right_16"
-                android:layout_marginBottom="@dimen/margin_bottom_12" />
+                android:layout_marginBottom="@dimen/margin_bottom_12"
+                android:layout_marginStart="@dimen/margin_left_16"
+                android:layout_marginEnd="@dimen/margin_right_16" />
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -143,8 +144,8 @@
                     android:textSize="@dimen/text_12" />
 
                 <ImageView
-                    android:layout_width="32dp"
-                    android:layout_height="32dp"
+                    android:layout_width="@dimen/dp32"
+                    android:layout_height="@dimen/dp32"
                     android:layout_alignParentEnd="true"
                     android:layout_alignParentRight="true"
                     android:layout_marginEnd="@dimen/margin_right_16"

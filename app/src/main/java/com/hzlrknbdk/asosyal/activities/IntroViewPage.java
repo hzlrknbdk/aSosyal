@@ -37,7 +37,6 @@ public class IntroViewPage extends AppCompatActivity implements View.OnClickList
         mPrevBtn = findViewById(R.id.prevBtn);
         mskip = findViewById(R.id.skip);
 
-
         sliderAdapter = new SliderAdapter(this);
         mSlideViewPager.setAdapter(sliderAdapter);
         addDotsIndicator(0);

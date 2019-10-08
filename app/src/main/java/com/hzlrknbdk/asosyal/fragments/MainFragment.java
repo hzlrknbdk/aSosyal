@@ -159,7 +159,6 @@ public class MainFragment extends Fragment implements View.OnClickListener {
                 if (account != null) firebaseAuthWithGoogle(account);
             } catch (ApiException e) {
                 Log.e(TAG, "Google sign in failed", e);
-                Toast.makeText(this.getContext(), "Burası aktif", Toast.LENGTH_SHORT).show();
             }
         }
     }
@@ -192,10 +191,9 @@ public class MainFragment extends Fragment implements View.OnClickListener {
 
                     }
 
-                }).addOnFailureListener(e -> Toast.makeText(getContext().getApplicationContext(), "Hata burada", Toast.LENGTH_LONG).show());
+                }).addOnFailureListener(e ->
+                Toast.makeText(getContext().getApplicationContext(), "Hata burada", Toast.LENGTH_LONG).show());
     }
-
-
 
 
 }

@@ -62,7 +62,7 @@
                         android:layout_marginTop="@dimen/margin_top_8"
                         android:layout_marginEnd="@dimen/margin_right_16"
                         android:layout_marginRight="@dimen/margin_right_16"
-                        android:layout_marginBottom="32dp"
+                        android:layout_marginBottom="@dimen/margin_bottom_30"
                         android:fontFamily="sans-serif-light"
                         android:gravity="start"
                         android:lineSpacingExtra="@dimen/lineSpacingExtra_4"

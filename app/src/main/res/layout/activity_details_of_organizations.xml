@@ -8,7 +8,8 @@
     android:background="@color/colorPrimaryDark"
     android:gravity="right"
     android:orientation="vertical"
-    tools:context=".activities.DetailsOfOrganizations">
+    tools:context=".activities.DetailsOfOrganizations"
+    tools:ignore="RtlHardcoded">
 
 
     <RelativeLayout
@@ -29,7 +30,8 @@
             android:hint="@string/arama"
             android:inputType="textPersonName"
             android:paddingLeft="@dimen/padding_30"
-            android:textColor="@color/content_text_color" />
+            android:textColor="@color/content_text_color"
+            tools:ignore="RtlSymmetry" />
 
         <Button
             android:id="@+id/loginAccount"

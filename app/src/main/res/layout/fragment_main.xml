@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragmentmain"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/fragmentmain"
     tools:context=".fragments.MainFragment">
 
     <RelativeLayout
@@ -25,8 +25,10 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_left_16"
                 android:layout_marginLeft="@dimen/margin_left_16"
                 android:layout_marginTop="@dimen/margin_top_16"
+                android:layout_marginEnd="@dimen/margin_right_16"
                 android:layout_marginRight="@dimen/margin_right_16"
                 android:layout_marginBottom="@dimen/margin_bottom_16"
                 android:orientation="vertical">
@@ -36,11 +38,14 @@
                     style="@style/Font_family_light"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/margin_right_16"
+                    android:layout_marginStart="@dimen/margin_left_16"
+                    android:layout_marginLeft="@dimen/margin_left_16"
                     android:layout_marginTop="@dimen/margin_top_8"
+                    android:layout_marginEnd="@dimen/margin_right_16"
                     android:layout_marginRight="@dimen/margin_right_16"
                     android:layout_marginBottom="@dimen/margin_top_8"
                     android:background="@drawable/edit_style"
+                    android:drawableStart="@drawable/ic_person"
                     android:drawableLeft="@drawable/ic_person"
                     android:drawablePadding="@dimen/padding_16"
                     android:hint="@string/email"
@@ -59,11 +64,14 @@
                     style="@style/Font_family_light"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/margin_right_16"
+                    android:layout_marginStart="@dimen/margin_left_16"
+                    android:layout_marginLeft="@dimen/margin_left_16"
                     android:layout_marginTop="@dimen/margin_top_8"
+                    android:layout_marginEnd="@dimen/margin_right_16"
                     android:layout_marginRight="@dimen/margin_right_16"
-                    android:layout_marginBottom="@dimen/margin_top_8"
+                    android:layout_marginBottom="@dimen/margin_bottom_8"
                     android:background="@drawable/edit_style"
+                    android:drawableStart="@drawable/password"
                     android:drawableLeft="@drawable/password"
                     android:drawablePadding="@dimen/padding_16"
                     android:hint="@string/sifre"
@@ -82,7 +90,7 @@
                     android:layout_marginLeft="@dimen/margin_right_16"
                     android:layout_marginTop="@dimen/margin_top_8"
                     android:layout_marginRight="@dimen/margin_right_16"
-                    android:layout_marginBottom="@dimen/margin_top_8"
+                    android:layout_marginBottom="@dimen/margin_bottom_8"
                     android:background="@drawable/purple_style"
                     android:text="@string/giris"
                     android:textColor="@color/white"
@@ -91,8 +99,10 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_left_16"
                     android:layout_marginLeft="@dimen/margin_left_16"
                     android:layout_marginTop="@dimen/margin_top_16"
+                    android:layout_marginEnd="@dimen/margin_right_16"
                     android:layout_marginRight="@dimen/margin_right_16"
                     android:layout_marginBottom="@dimen/margin_bottom_16"
                     android:orientation="horizontal">
@@ -101,7 +111,9 @@
                         android:id="@+id/tv_Create_Account"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_left_16"
                         android:layout_marginLeft="@dimen/margin_left_16"
+                        android:layout_marginEnd="@dimen/margin_right_16"
                         android:layout_marginRight="@dimen/margin_right_16"
                         android:layout_marginBottom="@dimen/margin_bottom_8"
                         android:layout_weight="1"
@@ -126,8 +138,9 @@
                         android:paddingBottom="@dimen/padding_16"
                         android:text="@string/yardim"
                         android:textColor="@color/white"
-                        android:textSize="@dimen/text_16" />
-
+                        android:textSize="@dimen/text_16"
+                        android:layout_marginStart="@dimen/margin_left_16"
+                        android:layout_marginEnd="@dimen/margin_right_16" />
 
                 </LinearLayout>
 
@@ -139,27 +152,25 @@
                     android:orientation="vertical">
 
                     <com.google.android.gms.common.SignInButton
-                        android:layout_marginTop="@dimen/margin_16dp"
                         android:id="@+id/googleLogin"
                         android:layout_width="180dp"
-                        android:layout_height="wrap_content"/>
-
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_16dp" />
 
                     <TextView
                         android:id="@+id/notUser"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_16dp"
                         android:fontFamily="sans-serif-regular"
                         android:gravity="center"
                         android:paddingTop="@dimen/padding_40"
-                        android:layout_marginTop="@dimen/margin_16dp"
                         android:paddingBottom="@dimen/padding_16"
-                        android:text="Üye olmadan devam et."
+                        android:text="@string/uye_olmadan_devam_et"
                         android:textColor="@color/white"
                         android:textSize="@dimen/text_16" />
 
                 </LinearLayout>
-
 
             </LinearLayout>
 

@@ -55,6 +55,22 @@
     <string name="mekan">Mekan</string>
     <string name="firma_kayit">Firma Kayıt</string>
     <string name="zaten_bir_hesabim_var">Zaten bir hesabim var.</string>
+    <string name="line_one">Line one</string>
+    <string name="sanatsal_etkinlik">Sanatsal Etkinlik Kategorileri</string>
+    <string name="toplum_hizmeti">Toplum Hizmeti Çalışmaları Kategorileri</string>
+    <string name="kültürel">Kültürel Etkinlik Kategorileri</string>
+    <string name="kurum_kuruluslar">Kurum/Kuruluşlar</string>
+    <string name="uye_olmadan_devam_et">Üye olmadan devam et.</string>
+    <string name="ad_soyad_kurum_ad">Adı Soyadı / Kurum Adı</string>
+    <string name="unvan_sektor">Ünvan / Sektör</string>
+    <string name="organizasyon">Organizasyon</string>
+    <string name="takip">Takip</string>
+    <string name="takip_i">Takipçi</string>
+    <string name="bilimsel_etkinlik_kategorileri">Bilimsel Etkinlik Kategorileri</string>
+    <string name="sportif_etkinlik_kategorileri">Sportif Etkinlik Kategorileri</string>
+    <string name="deneme">Deneme</string>
+    <string name="heading">HEADING</string>
+    <string name="phone">Telefon</string>
 
 
 </resources>

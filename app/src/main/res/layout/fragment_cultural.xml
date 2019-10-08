@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/margin_12"
         android:fontFamily="Font_family_light"
-        android:text="Kültürel Etkinlik Kategorileri"
+        android:text="@string/kültürel"
         android:textColor="@color/card_bg_color"
         android:textSize="@dimen/text_18"
         android:textStyle="bold" />

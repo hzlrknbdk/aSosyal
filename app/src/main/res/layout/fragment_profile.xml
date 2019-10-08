@@ -1,30 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimaryDark"
+    android:orientation="vertical"
     tools:context=".fragments.navigationbarfragment.ProfileFragment">
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="405dp">
+        android:layout_height="315dp">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="270dp"
+            android:layout_height="280dp"
             android:background="@color/cardviewback"
             android:orientation="vertical">
 
-            <de.hdodenhof.circleimageview.CircleImageView
+            <ImageView
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="30dp"
-                android:src="@drawable/profile"
-                app:civ_border_color="@color/colorPrimaryDark"
-                app:civ_border_width="3dp" />
+                android:src="@drawable/ic_account_circle" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -32,7 +31,7 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="10dp"
                 android:fontFamily="sans-serif-light"
-                android:text="Adı Soyadı / Kurum Adı"
+                android:text="@string/ad_soyad_kurum_ad"
                 android:textColor="@color/white"
                 android:textSize="@dimen/text_20"
                 android:textStyle="bold" />
@@ -41,12 +40,26 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="@dimen/margin_top_12"
                 android:fontFamily="sans-serif-light"
-                android:text="Ünvan / Sektör"
+                android:text="@string/unvan_sektor"
                 android:textColor="@color/colorPrimary"
                 android:textSize="@dimen/text_14"
                 android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/margin_6"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding_5">
+
+                <ImageView
+                    android:layout_width="@dimen/dp30"
+                    android:layout_height="@dimen/dp30"
+                    android:background="@drawable/linkedin" />
+            </LinearLayout>
 
         </LinearLayout>
 
@@ -54,8 +67,8 @@
             android:layout_width="300dp"
             android:layout_height="80dp"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="230dp"
-            app:cardCornerRadius="10dp">
+            android:layout_marginTop="250dp"
+            app:cardCornerRadius="@dimen/radius_10">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -74,13 +87,15 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
+                        android:fontFamily="sans-serif-light"
                         android:gravity="center"
-                        android:text="Organizasyon"
+                        android:text="@string/organizasyon"
                         android:textSize="@dimen/text_14" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-light"
                         android:paddingTop="10dp"
                         android:text="16"
                         android:textColor="@color/purple"
@@ -99,12 +114,14 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Takip"
+                        android:fontFamily="sans-serif-light"
+                        android:text="@string/takip"
                         android:textSize="@dimen/text_14" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-light"
                         android:paddingTop="10dp"
                         android:text="120"
                         android:textColor="@color/purple"
@@ -123,12 +140,14 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Takipçi"
+                        android:fontFamily="sans-serif-light"
+                        android:text="@string/takip_i"
                         android:textSize="@dimen/text_14" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-light"
                         android:paddingTop="10dp"
                         android:text="36"
                         android:textColor="@color/purple"
@@ -143,5 +162,64 @@
 
     </RelativeLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-</FrameLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/margin_16dp"
+
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="@dimen/padding_5">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin_right_16"
+                android:layout_marginRight="@dimen/margin_right_16"
+                android:src="@drawable/ic_email" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-light"
+                android:text="@string/email"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_16" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_margin="@dimen/margin_6"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="@dimen/padding_5">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin_right_16"
+                android:layout_marginRight="@dimen/margin_right_16"
+                android:src="@drawable/ic_phone" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-light"
+                android:text="@string/phone"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_16" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

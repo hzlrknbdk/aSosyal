@@ -6,12 +6,9 @@ import android.os.Handler;
 import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentTransaction;
 
 import com.airbnb.lottie.LottieAnimationView;
 import com.hzlrknbdk.asosyal.R;
-import com.hzlrknbdk.asosyal.fragments.MainFragment;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -34,11 +31,6 @@ public class MainActivity extends AppCompatActivity {
             lottieAnimationView.setVisibility(View.GONE);
             Intent intent = new Intent(this, IntroViewPage.class);
             startActivity(intent);
-           /* FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-            Fragment mainFragment = new MainFragment();
-            transaction.replace(R.id.container, mainFragment);
-            transaction.addToBackStack(null);
-            transaction.commit();*/
         }, SPLASH_TIME);
     }
 
